@@ -274,66 +274,16 @@ export default function Home({ setCurrentPage }: HomeProps) {
       <section className="py-12 md:py-16 lg:py-20 w-full max-w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12" id="documentation-verification">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          {/* Left: Certificate Graphic mockup */}
-          <div className="lg:col-span-5 order-2 lg:order-1 flex justify-center" id="coa-mockup-visual">
-            <div className="relative w-full max-w-sm bg-white border border-slate-200 rounded-xl shadow-md p-6 overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-cyan-400 to-blue-500" />
-              
-              {/* Report Header */}
-              <div className="flex items-center justify-between pb-4 border-b border-slate-100">
-                <div>
-                  <h4 className="text-xs font-bold text-slate-800">Adept Pharma</h4>
-                  <p className="text-[8px] text-slate-400 font-mono">HPLC VALIDATION RECORD</p>
-                </div>
-                <div className="h-6 w-6 rounded bg-cyan-50 flex items-center justify-center">
-                  <Activity className="h-3 w-3 text-cyan-600" />
-                </div>
-              </div>
-
-              {/* Sample meta */}
-              <div className="grid grid-cols-2 gap-2.5 py-4 border-b border-slate-100 text-left">
-                <div>
-                  <p className="text-[8px] text-slate-400">SAMPLE ID</p>
-                  <p className="text-[10px] font-bold text-slate-700">AD-BPC157-7405</p>
-                </div>
-                <div>
-                  <p className="text-[8px] text-slate-400">ANALYSIS DATE</p>
-                  <p className="text-[10px] font-bold text-slate-700">2026-07-11</p>
-                </div>
-                <div>
-                  <p className="text-[8px] text-slate-400">METHODOLOGY</p>
-                  <p className="text-[10px] font-bold text-slate-700">RP-HPLC / UV-220nm</p>
-                </div>
-                <div>
-                  <p className="text-[8px] text-slate-400">ACCURACY SCORE</p>
-                  <p className="text-[10px] font-bold text-emerald-600">99.94% PURE</p>
-                </div>
-              </div>
-
-              {/* Simulated spectrum peaks */}
-              <div className="py-4 border-b border-slate-100">
-                <p className="text-[8px] text-slate-400 text-left mb-2">HPLC CHROMATOGRAM SIGNAL PEAK</p>
-                <div className="h-16 w-full bg-slate-50 border border-slate-100 rounded flex items-end px-4 relative">
-                  {/* CSS SVG Peaks simulating real chromatography */}
-                  <svg className="w-full h-14 text-cyan-500" viewBox="0 0 100 50" preserveAspectRatio="none">
-                    <path d="M 0 50 L 20 50 L 25 45 L 30 50 L 50 50 L 55 10 L 60 50 L 75 50 L 80 40 L 85 50 L 100 50" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                  </svg>
-                  <span className="absolute top-1 right-2 text-[7px] text-slate-400 font-mono">Main Peak: Retention 5.42 min</span>
-                </div>
-              </div>
-
-              {/* Stamp of approval */}
-              <div className="pt-4 flex items-center justify-between">
-                <div className="flex items-center space-x-1.5">
-                  <div className="h-4.5 w-4.5 rounded-full bg-emerald-50 border border-emerald-300 flex items-center justify-center">
-                    <span className="text-[8px] text-emerald-600 font-bold">✓</span>
-                  </div>
-                  <span className="text-[9px] text-slate-500">Quality Verified batch</span>
-                </div>
-                <div className="border border-cyan-200 bg-cyan-50/30 rounded px-2 py-1 text-[8px] font-bold text-cyan-700 font-mono">
-                  COA RELEASED
-                </div>
-              </div>
+          {/* Left: Quality validation lab photo stretching to fill all gaps */}
+          <div className="lg:col-span-5 order-2 lg:order-1 w-full h-full flex animate-fade-in" id="coa-mockup-visual">
+            <div className="relative w-full h-full min-h-[350px] lg:min-h-[420px] rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 group">
+              <img 
+                src={heroBg} 
+                alt="Analytical Quality Control Validation Lab" 
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-blue-950/10 mix-blend-multiply" />
             </div>
           </div>
 
