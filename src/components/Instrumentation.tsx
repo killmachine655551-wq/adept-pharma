@@ -379,15 +379,14 @@ export default function Instrumentation() {
                 className="bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-md hover:border-cyan-200/80 transition-all duration-300 group cursor-pointer flex flex-col justify-between"
               >
                 <div>
-                  {/* Crop cover image with unified palette overlay */}
-                  <div className="h-48 bg-slate-100 relative overflow-hidden">
+                  {/* Image container filling edge-to-edge */}
+                  <div className="h-56 bg-slate-100 relative overflow-hidden border-b border-slate-100">
                     <img 
                       src={instrument.image} 
                       alt={instrument.name} 
-                      className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
                       referrerPolicy="no-referrer"
                     />
-                    <div className="absolute inset-0 bg-blue-900/10 mix-blend-multiply transition-opacity duration-300" />
                     <div className="absolute top-3 left-3 bg-slate-900/80 backdrop-blur px-2.5 py-1 rounded text-[9px] font-bold text-cyan-400 uppercase tracking-wider font-mono border border-slate-700/60">
                       {instrument.manufacturer}
                     </div>
