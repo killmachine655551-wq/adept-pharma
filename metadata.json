@@ -1,0 +1,6 @@
+{
+  "name": "Adept Pharma",
+  "description": "High-precision pharmaceutical testing, analytics, and method validation services under FDA, ISO, and WHO-GMP compliance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
