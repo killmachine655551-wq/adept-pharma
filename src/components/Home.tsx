@@ -334,12 +334,12 @@ export default function Home({ setCurrentPage }: HomeProps) {
       </section>
 
       {/* Partner Banner bottom */}
-      <section className="bg-gradient-to-r from-blue-700 to-indigo-800 text-white py-10 sm:py-14 rounded-2xl mx-4 sm:mx-6 lg:mx-8 px-4 sm:px-12 text-center relative overflow-hidden shadow-xl" id="partner-banner-bottom">
+      <section className="bg-gradient-to-r from-[#00c6ff] to-[#0072ff] text-white py-10 sm:py-14 rounded-2xl mx-4 sm:mx-6 lg:mx-8 mb-12 md:mb-16 px-4 sm:px-12 text-center relative overflow-hidden shadow-xl" id="partner-banner-bottom">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:16px_16px]" />
         
         <div className="relative z-10 max-w-4xl mx-auto space-y-5">
           <h3 className="font-display text-2xl sm:text-3xl font-bold tracking-tight">Partner with a clinical laboratory that understands accuracy.</h3>
-          <p className="text-blue-100 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
+          <p className="text-cyan-50/90 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
             Apply to connect with our scientific team. Establish customized validation routines, residual compound assays, or stability study programs.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row justify-center items-center gap-4">
@@ -348,7 +348,7 @@ export default function Home({ setCurrentPage }: HomeProps) {
                 setCurrentPage('contact');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
-              className="px-6 py-3 bg-white text-blue-700 font-bold rounded-lg shadow-md hover:bg-slate-50 hover:scale-103 transition-all cursor-pointer text-sm"
+              className="px-6 py-3 bg-white text-[#0072ff] font-bold rounded-lg shadow-md hover:bg-slate-50 hover:scale-103 transition-all cursor-pointer text-sm"
             >
               Request Custom Study Setup
             </button>
@@ -357,7 +357,7 @@ export default function Home({ setCurrentPage }: HomeProps) {
                 setCurrentPage('about');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
-              className="text-xs font-semibold text-blue-200 hover:text-white underline underline-offset-4"
+              className="text-xs font-semibold text-cyan-100/90 hover:text-white underline underline-offset-4"
             >
               Review Our Laboratory Accreditations
             </button>
