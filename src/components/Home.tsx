@@ -82,26 +82,29 @@ export default function Home({ setCurrentPage }: HomeProps) {
       
       {/* Hero Section */}
       <section className="relative pt-12 pb-24 md:pt-20 md:pb-36 bg-[#030712] border-b border-slate-900" id="home-hero">
-        {/* Large Hero Background Image on the right side */}
-        <div className="absolute inset-y-0 right-0 w-full lg:w-1/2 -z-10 overflow-hidden">
+        {/* Large Hero Background Image on the right side (80% width) */}
+        <div className="absolute inset-y-0 right-0 w-full lg:w-[80%] z-0 overflow-hidden">
           <div 
             className="w-full h-full bg-cover bg-center transform scale-102"
             style={{ backgroundImage: `url(${heroBg})` }}
           />
-          {/* Edge-to-edge blending gradients */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#030712] via-[#030712]/60 to-transparent lg:block hidden" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#030712]/20 via-[#030712]/90 to-[#030712] lg:hidden block" />
         </div>
+        {/* Edge-to-edge blending gradients (custom linear gradient for 20/80 transition & readability) */}
+        <div 
+          className="absolute inset-0 z-0 lg:block hidden pointer-events-none" 
+          style={{ backgroundImage: 'linear-gradient(to right, #030712 0%, #030712 20%, rgba(3, 7, 18, 0.95) 35%, rgba(3, 7, 18, 0.6) 55%, transparent 75%)' }}
+        />
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#030712]/10 via-[#030712]/90 to-[#030712] lg:hidden block pointer-events-none" />
 
         {/* Ambient clinical backglows behind text to keep it high tech */}
         <div className="absolute left-10 top-1/4 -z-10 h-100 w-100 rounded-full bg-cyan-500/5 blur-3xl" />
         <div className="absolute left-1/3 bottom-10 -z-10 h-80 w-80 rounded-full bg-blue-600/5 blur-3xl" />
 
-        <div className="mx-auto w-full max-w-full px-4 sm:px-6 lg:px-8 xl:px-12">
+        <div className="mx-auto w-full max-w-full px-4 sm:px-6 lg:px-8 xl:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             
             {/* Left Column: Text & CTAs */}
-            <div className="lg:col-span-6 space-y-6 text-left relative z-10">
+            <div className="lg:col-span-8 space-y-6 text-left relative z-10">
               <span className="inline-flex items-center space-x-1.5 px-3.5 py-1 rounded-full text-xs font-semibold tracking-wider text-cyan-400 bg-cyan-950/40 uppercase border border-cyan-800/40">
                 <span className="h-1.5 w-1.5 rounded-full bg-cyan-400 animate-pulse" />
                 <span>Telangana DCA Approved • ISO 9001:2015 Certified</span>
@@ -173,27 +176,6 @@ export default function Home({ setCurrentPage }: HomeProps) {
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Right Column: Floating Goals-style Card over background */}
-            <div className="lg:col-span-6 relative flex justify-center lg:justify-end lg:pr-12 pt-8 lg:pt-0" id="hero-floating-card-container">
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="bg-[#090d16]/80 backdrop-blur-md border border-cyan-500/30 rounded-2xl p-6 shadow-2xl max-w-xs space-y-4 hover:border-cyan-400/50 transition-all duration-300 text-left"
-              >
-                <div className="h-10 w-10 rounded-xl bg-cyan-950 flex items-center justify-center border border-cyan-500/20 text-cyan-400">
-                  <Atom className="h-5 w-5 animate-spin" style={{ animationDuration: '8s' }} />
-                </div>
-                <div className="space-y-1">
-                  <span className="text-[10px] font-mono font-bold text-cyan-400 uppercase tracking-widest">GMP CERTIFIED LAB</span>
-                  <h4 className="font-display text-sm font-bold text-white leading-tight">HPLC & Mass Spectrometry Vault</h4>
-                  <p className="text-[11px] text-slate-400 leading-relaxed pt-1.5 border-t border-slate-800">
-                    All validation sequences run under strict installation, operational, and performance credentials.
-                  </p>
-                </div>
-              </motion.div>
             </div>
 
           </div>
