@@ -7,6 +7,7 @@ import About from './components/About';
 import Services from './components/Services';
 import Accredations from './components/Accredations';
 import Instrumentation from './components/Instrumentation';
+import Clientele from './components/Clientele';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -31,6 +32,8 @@ export default function App() {
         return <Accredations setCurrentPage={setCurrentPage} />;
       case 'instrumentation':
         return <Instrumentation />;
+      case 'clientele':
+        return <Clientele />;
       case 'contact':
         return <Contact prefilledCategory={selectedServiceCategory} />;
       default:

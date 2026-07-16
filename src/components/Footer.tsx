@@ -39,7 +39,7 @@ export default function Footer({ setCurrentPage }: FooterProps) {
               <button onClick={() => handleNavClick('accredations')} className="flex items-center space-x-1.5 hover:text-cyan-400 transition-colors text-left">
                 <span className="text-slate-500 font-mono text-[10px]">&rarr;</span> <span>Accreditations</span>
               </button>
-              <button onClick={() => handleNavClick('home')} className="flex items-center space-x-1.5 hover:text-cyan-400 transition-colors text-left">
+              <button onClick={() => handleNavClick('clientele')} className="flex items-center space-x-1.5 hover:text-cyan-400 transition-colors text-left">
                 <span className="text-slate-500 font-mono text-[10px]">&rarr;</span> <span>Clientele</span>
               </button>
               <button onClick={() => handleNavClick('home')} className="flex items-center space-x-1.5 hover:text-cyan-400 transition-colors text-left">

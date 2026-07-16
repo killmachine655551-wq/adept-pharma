@@ -13,7 +13,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { PageId } from '../types';
-import heroBg from '../assets/hero-bg.jpg';
+import qaLabImg from '../assets/quality-assurance-lab.jpg';
 
 interface HomeProps {
   setCurrentPage: (page: PageId) => void;
@@ -86,7 +86,7 @@ export default function Home({ setCurrentPage }: HomeProps) {
         <div className="absolute inset-y-0 right-0 w-full lg:w-[80%] z-0 overflow-hidden">
           <div 
             className="w-full h-full bg-cover bg-center transform scale-102"
-            style={{ backgroundImage: `url(${heroBg})` }}
+            style={{ backgroundImage: `url(${qaLabImg})` }}
           />
         </div>
         {/* Edge-to-edge blending gradients (custom linear gradient for 20/80 transition & readability) */}
@@ -278,7 +278,7 @@ export default function Home({ setCurrentPage }: HomeProps) {
           <div className="lg:col-span-5 order-2 lg:order-1 w-full h-full flex animate-fade-in" id="coa-mockup-visual">
             <div className="relative w-full h-full min-h-[350px] lg:min-h-[420px] rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 group">
               <img 
-                src={heroBg} 
+                src={qaLabImg} 
                 alt="Analytical Quality Control Validation Lab" 
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
                 referrerPolicy="no-referrer"
@@ -294,7 +294,7 @@ export default function Home({ setCurrentPage }: HomeProps) {
               Documentation that exceeds standard industry protocols.
             </h3>
             <p className="text-slate-600 text-sm md:text-base leading-relaxed">
-              Every chemical characterization lot we complete is backed by fully-traceable raw spectra data. We do not just claim quality—we attach the molecular signature of proof.
+              Every chemical characterization lot we complete is backed by fully-traceable raw spectra data. We do not just claim quality—we attach the molecular signature of proof. Access comprehensive validation records directly in our interactive clientele vault.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4" id="documentation-checklist">
@@ -314,6 +314,19 @@ export default function Home({ setCurrentPage }: HomeProps) {
                 <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0" />
                 <span className="text-sm font-medium text-slate-700">Trace Heavy Metal Testing</span>
               </div>
+            </div>
+
+            <div className="pt-4">
+              <button
+                onClick={() => {
+                  setCurrentPage('clientele');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="inline-flex items-center space-x-1 text-sm font-bold text-blue-600 hover:text-blue-800"
+              >
+                <span>Simulate a Certificate of Analysis Verification</span>
+                <ArrowRight className="h-4 w-4" />
+              </button>
             </div>
           </div>
 
