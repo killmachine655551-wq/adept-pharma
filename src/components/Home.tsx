@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { PageId } from '../types';
 import qaLabImg from '../assets/quality-assurance-lab.jpg';
+import qaDocImg from '../assets/quality-assurance-doc.jpg';
 
 interface HomeProps {
   setCurrentPage: (page: PageId) => void;
@@ -278,7 +279,7 @@ export default function Home({ setCurrentPage }: HomeProps) {
           <div className="lg:col-span-5 order-2 lg:order-1 w-full h-full flex animate-fade-in" id="coa-mockup-visual">
             <div className="relative w-full h-full min-h-[350px] lg:min-h-[420px] rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 group">
               <img 
-                src={qaLabImg} 
+                src={qaDocImg} 
                 alt="Analytical Quality Control Validation Lab" 
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
                 referrerPolicy="no-referrer"
