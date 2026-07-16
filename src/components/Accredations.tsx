@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { ShieldCheck, Award, FileCheck2, Building2, CheckCircle2, ArrowRight } from 'lucide-react';
 import { PageId } from '../types';
 import pageBannerBg from '../assets/page-banner-bg.jpg';
+import accreditationsHeroBg from '../assets/accreditations-hero-bg.png';
 
 import cdscoImg from '../assets/accreditations/cdsco.jpg';
 import dcaImg from '../assets/accreditations/dca.jpg';
@@ -71,9 +72,14 @@ export default function Accredations({ setCurrentPage }: AccredationsProps) {
   return (
     <div className="relative overflow-hidden bg-slate-50/50" id="accredations-page-container">
       
-      {/* Header Banner */}
-      <section className="bg-[#030712] text-white relative py-16 md:py-24" id="accredations-hero">
-        <div className="absolute inset-0 bg-cover bg-center mix-blend-multiply" style={{ backgroundImage: `url(${pageBannerBg})`, opacity: 0.65 }} />
+      <section className="bg-[#030712] text-white relative py-20 md:py-28 overflow-hidden" id="accredations-hero">
+        <div 
+          className="absolute inset-y-0 right-0 w-[85%] bg-cover bg-right" 
+          style={{ backgroundImage: `url(${accreditationsHeroBg})`, opacity: 0.85 }} 
+        />
+        <div 
+          className="absolute inset-y-0 left-[15%] w-[20%] bg-gradient-to-r from-[#030712] to-transparent" 
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#030712]" />
         
         <div className="relative z-10 w-full max-w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 text-left space-y-4">

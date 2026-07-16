@@ -22,7 +22,7 @@ import {
   Network
 } from 'lucide-react';
 import pageBannerBg from '../assets/page-banner-bg.jpg';
-import aboutHeroBg from '../assets/about-hero-bg.jpg';
+import aboutHeroBg from '../assets/about-hero-bg.png';
 
 export default function About() {
   const coreValues = [

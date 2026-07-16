@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import { PageId } from '../types';
 import pageBannerBg from '../assets/page-banner-bg.jpg';
+import servicesHeroBg from '../assets/services-hero-bg.png';
 
 import chemicalImg from '../assets/services/chemical.jpg';
 import physicalImg from '../assets/services/physical.jpg';
@@ -188,9 +189,14 @@ export default function Services({
   return (
     <div className="relative overflow-hidden bg-slate-50/50" id="services-page-container">
       
-      {/* Header Banner */}
-      <section className="bg-[#030712] text-white relative py-16 md:py-24" id="services-hero">
-        <div className="absolute inset-0 bg-cover bg-center mix-blend-multiply" style={{ backgroundImage: `url(${pageBannerBg})`, opacity: 0.65 }} />
+      <section className="bg-[#030712] text-white relative py-20 md:py-28 overflow-hidden" id="services-hero">
+        <div 
+          className="absolute inset-y-0 right-0 w-[85%] bg-cover bg-right" 
+          style={{ backgroundImage: `url(${servicesHeroBg})`, opacity: 0.85 }} 
+        />
+        <div 
+          className="absolute inset-y-0 left-[15%] w-[20%] bg-gradient-to-r from-[#030712] to-transparent" 
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#030712]" />
         
         <div className="relative z-10 w-full max-w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 text-left space-y-4">
