@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import pageBannerBg from '../assets/page-banner-bg.jpg';
 
 // Import all 37 cropped client logos
 import client1 from '../assets/clients/client_1.png';
@@ -52,7 +53,7 @@ export default function Clientele() {
       
       {/* Header Banner */}
       <section className="bg-[#030712] text-white relative py-16 md:py-24" id="clientele-hero">
-        <div className="absolute inset-0 bg-cover bg-center mix-blend-multiply opacity-20" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80')` }} />
+        <div className="absolute inset-0 bg-cover bg-center mix-blend-multiply" style={{ backgroundImage: `url(${pageBannerBg})`, opacity: 0.65 }} />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#030712]" />
         
         <div className="relative z-10 w-full max-w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 text-left space-y-4">

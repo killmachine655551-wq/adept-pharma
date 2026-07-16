@@ -14,6 +14,7 @@ import {
   FileText
 } from 'lucide-react';
 import { InquiryFormData } from '../types';
+import pageBannerBg from '../assets/page-banner-bg.jpg';
 
 interface ContactProps {
   prefilledCategory: string;
@@ -31,8 +32,6 @@ export default function Contact({ prefilledCategory }: ContactProps) {
     additionalNotes: ''
   });
 
-  const [targetCompound, setTargetCompound] = useState('');
-  const [storageReqs, setStorageReqs] = useState('Ambient (15-25°C)');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submittedData, setSubmittedData] = useState<{ receiptId: string; date: string } | null>(null);
 
@@ -78,8 +77,6 @@ export default function Contact({ prefilledCategory }: ContactProps) {
       sampleCount: 1,
       additionalNotes: ''
     });
-    setTargetCompound('');
-    setStorageReqs('Ambient (15-25°C)');
     setSubmittedData(null);
   };
 
@@ -88,7 +85,7 @@ export default function Contact({ prefilledCategory }: ContactProps) {
       
       {/* Header Banner */}
       <section className="bg-slate-900 text-white relative py-16 md:py-24" id="contact-hero">
-        <div className="absolute inset-0 bg-cover bg-center mix-blend-multiply opacity-25" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1579154204601-01588f351167?auto=format&fit=crop&w=1200&q=80')` }} />
+        <div className="absolute inset-0 bg-cover bg-center mix-blend-multiply" style={{ backgroundImage: `url(${pageBannerBg})`, opacity: 0.65 }} />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900/90" />
         
         <div className="relative z-10 w-full max-w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 text-left space-y-4">
@@ -235,90 +232,13 @@ export default function Contact({ prefilledCategory }: ContactProps) {
                         />
                       </div>
                     </div>
-
-                    {/* Section 2: Study Scope */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                      <div className="space-y-1.5">
-                        <label className="text-xs font-bold text-slate-700">Select Core Study Service *</label>
-                        <select
-                          value={formData.serviceCategory}
-                          onChange={(e) => setFormData(prev => ({ ...prev, serviceCategory: e.target.value }))}
-                          className="w-full text-sm border border-slate-200 rounded-lg p-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-cyan-500/20"
-                        >
-                          <option value="assay">Method Validation & Assay</option>
-                          <option value="impurity">Impurity Profiling (LC-MS)</option>
-                          <option value="stability">Stability Chambers (ICH)</option>
-                          <option value="biologics">Biologics & Peptides Mapping</option>
-                          <option value="compendial">Raw Material Compendial Release</option>
-                        </select>
-                      </div>
-
-                      <div className="space-y-1.5">
-                        <label className="text-xs font-bold text-slate-700">Number of batches / lots *</label>
-                        <input 
-                          type="number" 
-                          min="1" 
-                          max="100"
-                          value={formData.sampleCount}
-                          onChange={(e) => setFormData(prev => ({ ...prev, sampleCount: Number(e.target.value) }))}
-                          className="w-full text-sm border border-slate-200 rounded-lg p-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 font-mono"
-                        />
-                      </div>
-
-                      <div className="space-y-1.5">
-                        <label className="text-xs font-bold text-slate-700">Target Analyte / Compound</label>
-                        <input 
-                          type="text" 
-                          placeholder="e.g. BPC-157, Custom Tripeptide"
-                          value={targetCompound}
-                          onChange={(e) => setTargetCompound(e.target.value)}
-                          className="w-full text-sm border border-slate-200 rounded-lg p-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500"
-                        />
-                      </div>
-
-                      <div className="space-y-1.5">
-                        <label className="text-xs font-bold text-slate-700">Environmental Storage Profile</label>
-                        <select
-                          value={storageReqs}
-                          onChange={(e) => setStorageReqs(e.target.value)}
-                          className="w-full text-sm border border-slate-200 rounded-lg p-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-cyan-500/20"
-                        >
-                          <option>Ambient (15-25°C)</option>
-                          <option>Refrigerated (2-8°C)</option>
-                          <option>Frozen (-20°C)</option>
-                          <option>Ultra-Frozen (-80°C)</option>
-                          <option>Desiccated / Nitrogen purged</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    {/* Urgency select */}
+                    {/* Inquiry Notes */}
                     <div className="space-y-1.5">
-                      <label className="text-xs font-bold text-slate-700 block">Queue Urgency tier</label>
-                      <div className="grid grid-cols-3 gap-3">
-                        {(['Standard', 'Rush', 'Critical'] as const).map((tier) => (
-                          <button
-                            key={tier}
-                            type="button"
-                            onClick={() => setFormData(prev => ({ ...prev, urgency: tier }))}
-                            className={`text-xs py-2.5 rounded-lg border font-medium transition-all ${
-                              formData.urgency === tier
-                                ? 'border-cyan-500 bg-cyan-50 text-cyan-700 font-bold shadow-sm'
-                                : 'border-slate-200 text-slate-600 hover:bg-slate-50'
-                            }`}
-                          >
-                            {tier}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Study Notes */}
-                    <div className="space-y-1.5">
-                      <label className="text-xs font-bold text-slate-700">Analytical Study outline / Special instructions</label>
+                      <label className="text-xs font-bold text-slate-700">Inquiry Details *</label>
                       <textarea 
                         rows={4}
-                        placeholder="Please detail targeted impurity profiles, desired mobile phases, validation limits, or list pre-calculated estimates..."
+                        required
+                        placeholder="Please enter the details of your inquiry here..."
                         value={formData.additionalNotes}
                         onChange={(e) => setFormData(prev => ({ ...prev, additionalNotes: e.target.value }))}
                         className="w-full text-sm border border-slate-200 rounded-lg p-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 font-sans"
@@ -340,11 +260,11 @@ export default function Contact({ prefilledCategory }: ContactProps) {
                       className="w-full py-3 text-sm font-bold text-white bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg hover:scale-101 hover:shadow-md transition-all flex items-center justify-center space-x-2 cursor-pointer"
                     >
                       {isSubmitting ? (
-                        <span>Registering study with cGMP desks...</span>
+                        <span>Sending inquiry...</span>
                       ) : (
                         <>
                           <Send className="h-4 w-4 text-cyan-300" />
-                          <span>Submit Study and Request Barcodes</span>
+                          <span>Submit Inquiry</span>
                         </>
                       )}
                     </button>
@@ -364,9 +284,9 @@ export default function Contact({ prefilledCategory }: ContactProps) {
                   </div>
 
                   <div className="space-y-2">
-                    <h3 className="font-display text-xl sm:text-2xl font-bold text-slate-900">cGMP Study Registered</h3>
+                    <h3 className="font-display text-xl sm:text-2xl font-bold text-slate-900">Inquiry Submitted</h3>
                     <p className="text-slate-500 text-xs sm:text-sm max-w-sm mx-auto">
-                      Your chemical analysis study request has been successfully queued at the Adept Intake Registry Desk.
+                      Your inquiry has been successfully sent to the Adept Intake Desk. We will get back to you shortly.
                     </p>
                   </div>
 
@@ -384,11 +304,11 @@ export default function Contact({ prefilledCategory }: ContactProps) {
 
                     <div className="grid grid-cols-2 gap-4 text-xs">
                       <div>
-                        <p className="text-[9px] text-slate-400 font-bold uppercase">SECURE RECEIPT ID</p>
+                        <p className="text-[9px] text-slate-400 font-bold uppercase">SECURE INQUIRY ID</p>
                         <p className="font-mono font-bold text-cyan-600">{submittedData.receiptId}</p>
                       </div>
                       <div>
-                        <p className="text-[9px] text-slate-400 font-bold uppercase">REGISTRATION DATE</p>
+                        <p className="text-[9px] text-slate-400 font-bold uppercase">SUBMISSION DATE</p>
                         <p className="font-semibold text-slate-800">{submittedData.date}</p>
                       </div>
                       <div>
@@ -396,8 +316,8 @@ export default function Contact({ prefilledCategory }: ContactProps) {
                         <p className="font-semibold text-slate-800 line-clamp-1">{formData.companyName}</p>
                       </div>
                       <div>
-                        <p className="text-[9px] text-slate-400 font-bold uppercase font-sans">SAMPLES ASSIGNED</p>
-                        <p className="font-mono font-bold text-slate-800">{formData.sampleCount} lot(s)</p>
+                        <p className="text-[9px] text-slate-400 font-bold uppercase font-sans">INQUIRY STATUS</p>
+                        <p className="font-mono font-bold text-slate-800">Pending Review</p>
                       </div>
                     </div>
                   </div>
@@ -406,26 +326,16 @@ export default function Contact({ prefilledCategory }: ContactProps) {
                   <div className="p-4 bg-cyan-50/50 rounded-xl border border-cyan-100/60 text-xs text-left max-w-md mx-auto flex items-start space-x-2.5">
                     <FileText className="h-4.5 w-4.5 text-cyan-600 mt-0.5 shrink-0" />
                     <p className="text-cyan-900 leading-relaxed font-medium">
-                      An automated intake checklist, secure shipping label PDF, and custom barcode stickers are being prepared for dispatch to <strong>{formData.email}</strong>. Please attach barcodes to sample vials before courier collection.
+                      A confirmation email has been dispatched to <strong>{formData.email}</strong>. Our intake team is reviewing your requirements and will reach out to you via email or phone.
                     </p>
                   </div>
 
-                  <div className="pt-4 flex justify-center space-x-3">
+                  <div className="pt-4 flex justify-center">
                     <button
                       onClick={resetForm}
-                      className="px-5 py-2.5 text-xs font-bold text-slate-600 hover:text-slate-800 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-lg transition-colors cursor-pointer"
+                      className="px-6 py-2.5 text-xs font-bold text-slate-600 hover:text-slate-800 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-lg transition-colors cursor-pointer"
                     >
-                      Register Another Study
-                    </button>
-                    <button
-                      onClick={() => {
-                        resetForm();
-                        // Download mockup instruction
-                        alert('Your cGMP shipping checklist has been prepared as a secure PDF download.');
-                      }}
-                      className="px-5 py-2.5 text-xs font-bold text-white bg-slate-900 hover:bg-slate-800 rounded-lg flex items-center space-x-1.5 transition-colors cursor-pointer"
-                    >
-                      <span>Print Intake Checklist</span>
+                      Submit Another Inquiry
                     </button>
                   </div>
 

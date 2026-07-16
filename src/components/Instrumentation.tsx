@@ -14,6 +14,7 @@ import {
   SearchCode
 } from 'lucide-react';
 import { Instrument } from '../types';
+import pageBannerBg from '../assets/page-banner-bg.jpg';
 
 import hplcImg from '../assets/instruments/hplc.jpg';
 import lcmsImg from '../assets/instruments/lcms.jpg';
@@ -308,7 +309,7 @@ export default function Instrumentation() {
       
       {/* Header Banner */}
       <section className="bg-[#030712] text-white relative py-16 md:py-24" id="instruments-hero">
-        <div className="absolute inset-0 bg-cover bg-center mix-blend-multiply opacity-20" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1532187863486-abf9d39d66e8?auto=format&fit=crop&w=1200&q=80')` }} />
+        <div className="absolute inset-0 bg-cover bg-center mix-blend-multiply" style={{ backgroundImage: `url(${pageBannerBg})`, opacity: 0.65 }} />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#030712]" />
         
         <div className="relative z-10 w-full max-w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 text-left space-y-4">

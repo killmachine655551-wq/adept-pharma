@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { PageId } from './types';
 import Navbar from './components/Navbar';
@@ -14,6 +14,24 @@ import Footer from './components/Footer';
 export default function App() {
   const [currentPage, setCurrentPage] = useState<PageId>('home');
   const [selectedServiceCategory, setSelectedServiceCategory] = useState<string>('');
+  const [activeServiceTab, setActiveServiceTab] = useState<string>('chemical');
+
+  const [pageViews, setPageViews] = useState(() => {
+    const stored = localStorage.getItem('adept_page_views');
+    const count = stored ? parseInt(stored, 10) : 0;
+    const newCount = count + 1;
+    localStorage.setItem('adept_page_views', newCount.toString());
+    return newCount;
+  });
+
+  useEffect(() => {
+    // Increment page views on tab/page change
+    setPageViews(prev => {
+      const next = prev + 1;
+      localStorage.setItem('adept_page_views', next.toString());
+      return next;
+    });
+  }, [currentPage]);
 
   const renderPage = () => {
     switch (currentPage) {
@@ -26,6 +44,8 @@ export default function App() {
           <Services 
             setCurrentPage={setCurrentPage} 
             setSelectedServiceCategory={setSelectedServiceCategory} 
+            activeServiceTab={activeServiceTab}
+            setActiveServiceTab={setActiveServiceTab}
           />
         );
       case 'accredations':
@@ -80,7 +100,11 @@ export default function App() {
       </main>
 
       {/* Corporate Clinical Footer */}
-      <Footer setCurrentPage={setCurrentPage} />
+      <Footer 
+        setCurrentPage={setCurrentPage} 
+        setActiveServiceTab={setActiveServiceTab} 
+        visitorCount={1749554 + pageViews} 
+      />
 
     </div>
   );

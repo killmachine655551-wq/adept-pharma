@@ -21,6 +21,7 @@ import {
   Laptop,
   Network
 } from 'lucide-react';
+import pageBannerBg from '../assets/page-banner-bg.jpg';
 
 export default function About() {
   const coreValues = [
@@ -65,7 +66,7 @@ export default function About() {
       
       {/* Visual Header */}
       <section className="bg-[#030712] text-white relative py-16 md:py-24" id="about-hero">
-        <div className="absolute inset-0 bg-cover bg-center mix-blend-multiply opacity-20" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80')` }} />
+        <div className="absolute inset-0 bg-cover bg-center mix-blend-multiply" style={{ backgroundImage: `url(${pageBannerBg})`, opacity: 0.65 }} />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#030712]" />
         
         <div className="relative z-10 w-full max-w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 text-left space-y-4">
