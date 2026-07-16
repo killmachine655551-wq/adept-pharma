@@ -294,7 +294,7 @@ export default function Home({ setCurrentPage }: HomeProps) {
               Documentation that exceeds standard industry protocols.
             </h3>
             <p className="text-slate-600 text-sm md:text-base leading-relaxed">
-              Every chemical characterization lot we complete is backed by fully-traceable raw spectra data. We do not just claim quality—we attach the molecular signature of proof. Access comprehensive validation records directly in our interactive clientele vault.
+              Every chemical characterization lot we complete is backed by fully-traceable raw spectra data. We do not just claim quality—we attach the molecular signature of proof.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4" id="documentation-checklist">
@@ -314,19 +314,6 @@ export default function Home({ setCurrentPage }: HomeProps) {
                 <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0" />
                 <span className="text-sm font-medium text-slate-700">Trace Heavy Metal Testing</span>
               </div>
-            </div>
-
-            <div className="pt-4">
-              <button
-                onClick={() => {
-                  setCurrentPage('clientele');
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
-                className="inline-flex items-center space-x-1 text-sm font-bold text-blue-600 hover:text-blue-800"
-              >
-                <span>Simulate a Certificate of Analysis Verification</span>
-                <ArrowRight className="h-4 w-4" />
-              </button>
             </div>
           </div>
 

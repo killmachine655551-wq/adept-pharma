@@ -12,7 +12,14 @@ import {
   CheckCircle,
   Target,
   Eye,
-  ShieldAlert
+  ShieldAlert,
+  User,
+  ShieldCheck,
+  ClipboardList,
+  Microscope,
+  TrendingUp,
+  Laptop,
+  Network
 } from 'lucide-react';
 
 export default function About() {
@@ -42,27 +49,6 @@ export default function About() {
     'Employees who enjoy the richness of a broad, technical environment',
     'With strong technical support, ADEPT is able to identify process/quality improvement opportunities and recommend suitable solutions',
     'Knowledge, experience, and commitment of our team ensure that we provide value-added results and solutions to our clients'
-  ];
-
-  const accreditations = [
-    {
-      agency: 'NABL (Quality Council of India)',
-      status: 'Approved Testing Lab',
-      scope: 'Approved Testing Laboratory by National Accreditation Board for Testing and Calibration Laboratories (NABL), Quality Council of India.',
-      id: 'NABL APPROVED'
-    },
-    {
-      agency: 'CDSCO, New Delhi',
-      status: 'Central Approved Lab',
-      scope: 'Approved Testing Laboratory by CDSCO, New Delhi for standard pharmaceutical evaluations and drug validation sequences.',
-      id: 'CDSCO APPROVED'
-    },
-    {
-      agency: 'DCA, State of Telangana',
-      status: 'State Approved Lab',
-      scope: 'Approved Testing Laboratory by DCA, State of Telangana for human drug formulations, APIs, excipients, and raw materials.',
-      id: 'DCA Approved'
-    }
   ];
 
   const qualityStandards = [
@@ -159,31 +145,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Active Accreditations */}
-      <section className="py-12 md:py-16 lg:py-20 w-full max-w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 text-left" id="about-accreditations">
-        <div className="max-w-2xl space-y-2 mb-10">
-          <span className="text-xs font-bold uppercase tracking-wider text-blue-600">INSPECTION STANDARDS</span>
-          <h2 className="font-display text-2xl md:text-3xl font-bold text-slate-950">Active Laboratory Accreditations</h2>
-          <p className="text-slate-500 text-sm">We maintain absolute regulatory standing under state and federal licensing bodies.</p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8" id="accreditations-grid">
-          {accreditations.map((acc, i) => (
-            <div key={i} className="bg-white border border-slate-200/80 rounded-xl p-6 space-y-4 shadow-sm relative overflow-hidden">
-              <div className="absolute top-0 right-0 h-16 w-16 bg-gradient-to-bl from-cyan-100/30 to-transparent rounded-bl-3xl" />
-              <div className="space-y-1">
-                <span className="text-[10px] font-mono font-bold text-cyan-600 uppercase tracking-widest">{acc.agency}</span>
-                <h4 className="font-bold text-slate-900 text-lg">{acc.status}</h4>
-                <p className="text-xs text-slate-450 font-mono">REGISTRY: {acc.id}</p>
-              </div>
-              <p className="text-slate-650 text-xs leading-relaxed pt-2.5 border-t border-slate-100">
-                <span className="font-semibold text-slate-800">Compliance Scope:</span> {acc.scope}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* Management Team intro block */}
       <section className="py-12 md:py-16 lg:py-20 bg-white border-t border-slate-100 text-left" id="about-management">
         <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -191,8 +152,8 @@ export default function About() {
           <div className="lg:col-span-7 space-y-5">
             <span className="text-xs font-bold uppercase tracking-wider text-blue-600">EXPERT COMMAND</span>
             <h2 className="font-display text-2xl md:text-3.5xl font-bold text-slate-950">Our Management Team</h2>
-            <p className="text-slate-650 text-sm md:text-base leading-relaxed">
-              Adept Pharma Bioscience Excellence Private Limited is operated by **highly skilled, qualified, and experienced professionals** to offer advanced training and testing assays in the pharmaceutical and health sciences.
+            <p className="text-slate-655 text-sm md:text-base leading-relaxed">
+              Adept Pharma Bioscience Excellence Private Limited is operated by <strong>highly skilled, qualified, and experienced professionals</strong> to offer advanced training and testing assays in the pharmaceutical and health sciences.
             </p>
             <p className="text-slate-600 text-sm leading-relaxed">
               Our founders possess deep domain knowledge, maintaining active roles in day-to-day operations and validating laboratory methods against international pharmacopoeial standards.
@@ -214,6 +175,303 @@ export default function About() {
                 <div className="h-2 w-2 rounded-full bg-cyan-500" />
                 <span>Standard verification of data integrity & reproducibility</span>
               </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* Hierarchy Chart Section */}
+      <section className="py-12 md:py-16 bg-slate-50/50 border-t border-slate-100 text-center relative overflow-hidden" id="about-hierarchy">
+        <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+          
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+            <span className="text-xs font-bold uppercase tracking-wider text-blue-600 font-mono">ORGANIZATIONAL DESIGN</span>
+            <h3 className="font-display text-2xl md:text-3.5xl font-bold text-slate-900 font-bold">Organizational Hierarchy & Reporting Matrix</h3>
+            <p className="text-slate-550 text-xs sm:text-sm">
+              Our clear, expert-led departmental reporting matrix ensures strict separation of compliance duties, data integrity controls, and operations transparency.
+            </p>
+          </div>
+
+          {/* Graphical Tree Area */}
+          <div className="relative max-w-6xl mx-auto">
+            
+            {/* Top Level: Managing Director */}
+            <div className="flex flex-col items-center mb-10 relative">
+              <div className="bg-white border-2 border-blue-500 text-slate-900 rounded-2xl p-5 shadow-md text-center relative z-10 w-full max-w-[280px]">
+                <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-blue-600 h-10 w-10 rounded-full flex items-center justify-center shadow border-2 border-white">
+                  <User className="h-5 w-5 text-white" />
+                </div>
+                <h4 className="font-display font-bold text-base mt-2 text-slate-900">Mr. A. Govardhana Reddy</h4>
+                <p className="text-[10px] font-mono uppercase tracking-wider text-blue-600 font-bold mt-0.5">Managing Director (MD)</p>
+              </div>
+              {/* Vertical line going down from MD */}
+              <div className="h-10 w-0.5 bg-slate-300"></div>
+            </div>
+
+            {/* Horizontal line & vertical drops layout - only on large screens */}
+            <div className="hidden lg:block absolute left-[12.5%] right-[12.5%] top-[108px] h-0.5 bg-slate-300"></div>
+
+            {/* Main reporting tree grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 pt-4 lg:pt-0 relative">
+              
+              {/* Branch 1: Quality Assurance */}
+              <div className="flex flex-col items-center relative">
+                {/* Vertical connector drop line on desktop */}
+                <div className="hidden lg:block h-6 w-0.5 bg-slate-300 mb-4"></div>
+                <div className="bg-white border border-slate-200 rounded-2xl p-5.5 w-full shadow-sm hover:shadow-md hover:border-cyan-200/80 transition-all text-left space-y-4">
+                  <div className="flex items-center space-x-3 pb-3 border-b border-slate-100">
+                    <div className="h-9 w-9 rounded-xl bg-cyan-50 flex items-center justify-center text-cyan-600 shrink-0">
+                      <ShieldCheck className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <span className="text-[9px] font-mono font-bold text-slate-450 uppercase block tracking-wider">HOD QA</span>
+                      <h5 className="font-bold text-slate-900 text-sm">M. Srinivas</h5>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider font-mono">QA Division Team</p>
+                    <ul className="space-y-1.5 text-xs text-slate-650">
+                      <li className="flex items-center space-x-1.5">
+                        <div className="h-1 w-1 rounded-full bg-cyan-400" />
+                        <span>Shyam Sundar <span className="text-[10px] font-mono text-slate-400 font-bold">(AM)</span></span>
+                      </li>
+                      <li className="flex items-center space-x-1.5">
+                        <div className="h-1 w-1 rounded-full bg-cyan-400" />
+                        <span>Sridevi <span className="text-[10px] font-mono text-slate-400 font-bold">(AM)</span></span>
+                      </li>
+                      <li className="flex items-center space-x-1.5">
+                        <div className="h-1 w-1 rounded-full bg-cyan-400" />
+                        <span>Ramakrishna <span className="text-[10px] font-mono text-slate-400 font-bold">(AM)</span></span>
+                      </li>
+                      <li className="pt-1 text-[10px] text-slate-400 font-medium italic pl-2.5">
+                        & support staff team
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Branch 2: Quality Control */}
+              <div className="flex flex-col items-center relative">
+                {/* Vertical connector drop line on desktop */}
+                <div className="hidden lg:block h-6 w-0.5 bg-slate-300 mb-4"></div>
+                <div className="bg-white border border-slate-200 rounded-2xl p-5.5 w-full shadow-sm hover:shadow-md hover:border-cyan-200/80 transition-all text-left space-y-4">
+                  <div className="flex items-center space-x-3 pb-3 border-b border-slate-100">
+                    <div className="h-9 w-9 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 shrink-0">
+                      <ClipboardList className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <span className="text-[9px] font-mono font-bold text-slate-450 uppercase block tracking-wider">HOD QC</span>
+                      <h5 className="font-bold text-slate-900 text-sm">K. Keshava Kishore</h5>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider font-mono">QC Division Managers</p>
+                    <ul className="space-y-1.5 text-xs text-slate-650">
+                      <li className="flex items-center space-x-1.5">
+                        <div className="h-1 w-1 rounded-full bg-blue-400" />
+                        <span>R. Anil Kumar <span className="text-[10px] font-mono text-slate-400 font-bold">(Manager)</span></span>
+                      </li>
+                      <li className="flex items-center space-x-1.5">
+                        <div className="h-1 w-1 rounded-full bg-blue-400" />
+                        <span>Vishnuvardhan Reddy <span className="text-[10px] font-mono text-slate-400 font-bold">(Manager)</span></span>
+                      </li>
+                      <li className="flex items-center space-x-1.5">
+                        <div className="h-1 w-1 rounded-full bg-blue-400" />
+                        <span>Narsimha Reddy <span className="text-[10px] font-mono text-slate-400 font-bold">(Dy Manager)</span></span>
+                      </li>
+                      <li className="pt-1 text-[10px] text-slate-400 font-medium italic pl-2.5">
+                        & laboratory technician team
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Branch 3: Microbiology */}
+              <div className="flex flex-col items-center relative">
+                {/* Vertical connector drop line on desktop */}
+                <div className="hidden lg:block h-6 w-0.5 bg-slate-300 mb-4"></div>
+                <div className="bg-white border border-slate-200 rounded-2xl p-5.5 w-full shadow-sm hover:shadow-md hover:border-cyan-200/80 transition-all text-left space-y-4">
+                  <div className="flex items-center space-x-3 pb-3 border-b border-slate-100">
+                    <div className="h-9 w-9 rounded-xl bg-teal-50 flex items-center justify-center text-teal-600 shrink-0">
+                      <Microscope className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <span className="text-[9px] font-mono font-bold text-slate-450 uppercase block tracking-wider">HOD Microbiology</span>
+                      <h5 className="font-bold text-slate-900 text-sm">Dr. Satya Babu</h5>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider font-mono">Microbiology Team</p>
+                    <ul className="space-y-1.5 text-xs text-slate-650">
+                      <li className="flex items-center space-x-1.5">
+                        <div className="h-1 w-1 rounded-full bg-teal-400" />
+                        <span>Sarada <span className="text-[10px] font-mono text-slate-400 font-bold">(AM)</span></span>
+                      </li>
+                      <li className="flex items-center space-x-1.5">
+                        <div className="h-1 w-1 rounded-full bg-teal-400" />
+                        <span>Sekuntala <span className="text-[10px] font-mono text-slate-400 font-bold">(Sr Microbiologist)</span></span>
+                      </li>
+                      <li className="flex items-center space-x-1.5">
+                        <div className="h-1 w-1 rounded-full bg-teal-400" />
+                        <span>Srinivas Reddy <span className="text-[10px] font-mono text-slate-400 font-bold">(Microbiologist)</span></span>
+                      </li>
+                      <li className="pt-1 text-[10px] text-slate-400 font-medium italic pl-2.5">
+                        & sterilization support staff
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Branch 4: Support Divisions */}
+              <div className="flex flex-col items-center relative">
+                {/* Vertical connector drop line on desktop */}
+                <div className="hidden lg:block h-6 w-0.5 bg-slate-300 mb-4"></div>
+                <div className="w-full flex flex-col space-y-4">
+                  
+                  {/* HR Card */}
+                  <div className="bg-white border border-slate-200 rounded-xl p-4.5 shadow-sm text-left flex items-start space-x-3.5">
+                    <div className="h-8.5 w-8.5 rounded-lg bg-indigo-50 flex items-center justify-center text-indigo-600 shrink-0">
+                      <Users className="h-4.5 w-4.5" />
+                    </div>
+                    <div className="space-y-0.5">
+                      <span className="text-[8px] font-mono font-bold text-slate-400 uppercase tracking-wider block">Human Resources</span>
+                      <h6 className="font-bold text-slate-900 text-xs leading-tight">Arikatla Jyothiraditya-Reddy</h6>
+                      <p className="text-[10px] text-slate-500 font-medium">HR Manager & Team</p>
+                    </div>
+                  </div>
+
+                  {/* Business Development Card */}
+                  <div className="bg-white border border-slate-200 rounded-xl p-4.5 shadow-sm text-left flex items-start space-x-3.5">
+                    <div className="h-8.5 w-8.5 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-600 shrink-0">
+                      <TrendingUp className="h-4.5 w-4.5" />
+                    </div>
+                    <div className="space-y-0.5">
+                      <span className="text-[8px] font-mono font-bold text-slate-400 uppercase tracking-wider block">Business Development</span>
+                      <h6 className="font-bold text-slate-900 text-xs leading-tight">Sai Kiran.N</h6>
+                      <p className="text-[10px] text-slate-500 font-medium">AGM & Team</p>
+                    </div>
+                  </div>
+
+                  {/* IT Card */}
+                  <div className="bg-white border border-slate-200 rounded-xl p-4.5 shadow-sm text-left flex items-start space-x-3.5">
+                    <div className="h-8.5 w-8.5 rounded-lg bg-purple-50 flex items-center justify-center text-purple-600 shrink-0">
+                      <Laptop className="h-4.5 w-4.5" />
+                    </div>
+                    <div className="space-y-0.5">
+                      <span className="text-[8px] font-mono font-bold text-slate-400 uppercase tracking-wider block">Information Technology</span>
+                      <h6 className="font-bold text-slate-900 text-xs leading-tight">KSM Manoj Kumar</h6>
+                      <p className="text-[10px] text-slate-500 font-medium">IT Lead & Team</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* Employee Distribution Table Section */}
+      <section className="py-12 md:py-16 bg-white border-t border-slate-100 text-left" id="about-distribution">
+        <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          
+          {/* Left Column: Descriptive Summary of Staffing Quality */}
+          <div className="lg:col-span-5 space-y-6">
+            <span className="text-xs font-bold uppercase tracking-wider text-blue-600 font-mono">STAFF METRICS</span>
+            <h3 className="font-display text-2xl md:text-3xl font-bold text-slate-900">Dedicated Technical Manpower</h3>
+            <p className="text-slate-655 text-sm leading-relaxed">
+              Our lab operations are powered by a robust team of <strong>56 qualified specialists</strong>. Every division is staffed by trained professionals whose skillsets align with the precise analytical technologies they operate.
+            </p>
+            
+            <div className="bg-slate-50 border border-slate-200/60 rounded-2xl p-6.5 space-y-4">
+              <h5 className="font-bold text-slate-900 text-sm">Skills & Capability Highlights</h5>
+              <div className="space-y-3.5 text-xs text-slate-650">
+                <div className="flex items-start space-x-3">
+                  <div className="h-5 w-5 rounded-full bg-cyan-100 flex items-center justify-center shrink-0 text-cyan-600 font-bold text-[10px]">45%</div>
+                  <p>Percentage of researchers holding postgraduate or doctorate degrees in chemistry and life sciences.</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="h-5 w-5 rounded-full bg-blue-100 flex items-center justify-center shrink-0 text-blue-600 font-bold text-[10px]">100%</div>
+                  <p>Annual GxP compliance training completed by our quality control and assurance team members.</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="h-5 w-5 rounded-full bg-teal-100 flex items-center justify-center shrink-0 text-teal-600 font-bold text-[10px]">7+</div>
+                  <p>Years average hands-on laboratory experience across our primary analytical instrumentation supervisors.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Interactive Table */}
+          <div className="lg:col-span-7 w-full overflow-hidden border border-slate-200 rounded-2xl shadow-sm">
+            <div className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-4 flex items-center justify-between border-b border-slate-200">
+              <div className="flex items-center space-x-3">
+                <Users className="h-5 w-5 text-blue-100" />
+                <h4 className="font-display font-bold text-base">Departmental Staff Distribution</h4>
+              </div>
+              <span className="text-[10px] font-mono bg-white/20 backdrop-blur px-2.5 py-1 rounded-full font-bold uppercase tracking-wider">
+                Total Staff: 56
+              </span>
+            </div>
+            
+            <div className="divide-y divide-slate-150">
+              
+              {/* Header row */}
+              <div className="bg-slate-50 grid grid-cols-12 px-6 py-3.5 text-xs font-bold text-slate-600 font-mono tracking-wider uppercase">
+                <div className="col-span-9 text-left">Department</div>
+                <div className="col-span-3 text-center">No. of Employees</div>
+              </div>
+
+              {/* Rows */}
+              {[
+                { name: 'Quality Assurance', count: 11, icon: <ShieldCheck className="h-4 w-4 text-cyan-600" /> },
+                { name: 'Quality Control (Wet Section)', count: 10, icon: <ClipboardCheck className="h-4 w-4 text-blue-600" /> },
+                { name: 'Instrumentation (HPLC, GC & TOC)', count: 7, icon: <Beaker className="h-4 w-4 text-teal-600" /> },
+                { name: 'Mass Spectroscopy (AAS, LCMS, ICPMS & GCMS)', count: 6, icon: <Dna className="h-4 w-4 text-purple-600" /> },
+                { name: 'Microbiology', count: 11, icon: <Microscope className="h-4 w-4 text-indigo-600" /> },
+                { name: 'Information Technology (IT)', count: 2, icon: <Laptop className="h-4 w-4 text-slate-600" /> },
+                { name: 'Maintenance Department', count: 1, icon: <Building2 className="h-4 w-4 text-amber-600" /> },
+                { name: 'Personnel & Administration', count: 2, icon: <Users className="h-4 w-4 text-sky-600" /> },
+                { name: 'Purchase Department', count: 1, icon: <Compass className="h-4 w-4 text-rose-600" /> },
+                { name: 'Human Resources (HR)', count: 1, icon: <User className="h-4 w-4 text-violet-600" /> },
+                { name: 'Business development', count: 4, icon: <TrendingUp className="h-4 w-4 text-emerald-600" /> }
+              ].map((row, idx) => (
+                <div 
+                  key={idx} 
+                  className={`grid grid-cols-12 px-6 py-3 text-xs sm:text-sm items-center hover:bg-slate-50/50 transition-colors ${
+                    idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/20'
+                  }`}
+                >
+                  <div className="col-span-9 flex items-center space-x-3 text-slate-700 font-medium">
+                    <div className="shrink-0">{row.icon}</div>
+                    <span>{row.name}</span>
+                  </div>
+                  <div className="col-span-3 text-center text-slate-900 font-bold font-mono">
+                    {row.count}
+                  </div>
+                </div>
+              ))}
+
+              {/* Total row */}
+              <div className="bg-gradient-to-r from-blue-50 to-cyan-50/30 grid grid-cols-12 px-6 py-4 items-center border-t border-slate-200">
+                <div className="col-span-9 flex items-center space-x-3 text-blue-900 font-bold">
+                  <div className="shrink-0">
+                    <Network className="h-4.5 w-4.5 text-blue-700 animate-pulse" />
+                  </div>
+                  <span className="uppercase tracking-wider font-mono text-xs">Total Organization Strength</span>
+                </div>
+                <div className="col-span-3 text-center text-blue-950 font-black font-mono text-base">
+                  56
+                </div>
+              </div>
+
             </div>
           </div>
 

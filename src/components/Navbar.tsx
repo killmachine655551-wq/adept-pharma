@@ -18,7 +18,6 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
     { id: 'services', label: 'Services' },
     { id: 'accredations', label: 'Accreditations' },
     { id: 'instrumentation', label: 'Instrumentation' },
-    { id: 'clientele', label: 'Clientele' },
     { id: 'contact', label: 'Contact' },
   ];
 
@@ -134,13 +133,6 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
               })}
               
               <div className="pt-4 mt-2 border-t border-slate-100 flex flex-col space-y-3">
-                <button
-                  onClick={() => handleNavClick('clientele')}
-                  className="flex items-center justify-center space-x-2 w-full py-3 text-sm font-semibold text-slate-700 bg-slate-50 rounded-lg hover:bg-slate-100 border border-slate-200 transition-colors"
-                >
-                  <FileCheck className="h-4 w-4 text-cyan-500" />
-                  <span>Interactive COA Lab Report Verification</span>
-                </button>
                 <button
                   onClick={() => handleNavClick('contact')}
                   className="flex items-center justify-center space-x-2 w-full py-3.5 text-sm font-semibold text-white bg-gradient-to-r from-cyan-400 to-blue-600 rounded-lg shadow-md hover:from-cyan-500 hover:to-blue-700 transition-all"
