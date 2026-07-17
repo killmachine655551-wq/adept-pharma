@@ -17,10 +17,10 @@ import { Instrument } from '../types';
 import pageBannerBg from '../assets/page-banner-bg.jpg';
 import instrumentationHeroBg from '../assets/instrumentation-hero-bg.png';
 
-import hplcImg from '../assets/instruments/hplc.jpg';
-import lcmsImg from '../assets/instruments/lcms.jpg';
-import gcImg from '../assets/instruments/gc.jpg';
-import icpmsImg from '../assets/instruments/icpms.jpg';
+import hplcImg from '../assets/instruments/hplc.png';
+import lcmsImg from '../assets/instruments/lcms.png';
+import gcImg from '../assets/instruments/gc.png';
+import icpmsImg from '../assets/instruments/icpms.png';
 import particleSizeImg from '../assets/instruments/particle_size.jpg';
 import ftirImg from '../assets/instruments/ftir.jpg';
 import karlFischerImg from '../assets/instruments/karl_fischer.jpg';
