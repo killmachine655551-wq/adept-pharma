@@ -1,7 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Space Grotesk", sans-serif;
+  --font-sans: "Avenir Next", "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Avenir Next", "Montserrat", sans-serif;
 }
+
+/* Global typography overrides based on Avenir Next style guidelines */
+body {
+  font-family: var(--font-sans);
+  font-weight: 400; /* Body text: Avenir Next Regular */
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: var(--font-display);
+  font-weight: 600; /* Main headings: Avenir Next Demi Bold */
+}
+
+/* Normalize font-bold utility for headings to Demi Bold (600) or Medium (500) */
+h1.font-bold, h2.font-bold, h3.font-bold, h4.font-bold, h5.font-bold, h6.font-bold,
+.font-display.font-bold {
+  font-weight: 600;
+}
+
+/* Navigation items: Avenir Next Medium (500) */
+nav button, nav a, .nav-item, [id*="nav-"] {
+  font-weight: 500 !important;
+}
+
+/* Interactive buttons: Avenir Next Demi Bold (600) */
+button, 
+.btn, 
+input[type="button"], 
+input[type="submit"], 
+a[class*="btn"], 
+button.font-bold {
+  font-weight: 600 !important;
+}
+

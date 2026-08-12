@@ -15,46 +15,43 @@ export default function Footer({ setCurrentPage, setActiveServiceTab, visitorCou
   };
 
   return (
-    <footer className="bg-slate-900 text-slate-300 border-t border-slate-800" id="adept-footer">
+    <footer className="bg-[#004aad] text-white border-t border-white/10" id="adept-footer">
       <div className="mx-auto w-full max-w-full px-4 py-12 sm:px-6 lg:px-8 xl:px-12">
         
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-10 border-b border-slate-800 text-left">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-10 border-b border-white/15 text-left">
           
           {/* Column 1: ADEPT PHARMA */}
           <div className="md:col-span-3 space-y-6">
             <div className="pb-1">
-              <AdeptLogo theme="dark" className="h-10 w-auto" />
+              <AdeptLogo theme="light" className="h-10 w-auto" />
             </div>
             
-            <div className="grid grid-cols-2 gap-x-6 gap-y-2 text-xs text-slate-350">
-              <button onClick={() => handleNavClick('home')} className="flex items-center space-x-1.5 hover:text-cyan-400 transition-colors text-left">
-                <span className="text-slate-500 font-mono text-[10px]">&rarr;</span> <span>Home</span>
+            <div className="grid grid-cols-2 gap-x-6 gap-y-2 text-xs text-white/80">
+              <button onClick={() => handleNavClick('home')} className="flex items-center space-x-1.5 hover:text-white transition-colors text-left">
+                <span className="text-white/40 font-mono text-[10px]">&rarr;</span> <span>Home</span>
               </button>
-              <button onClick={() => handleNavClick('accredations')} className="flex items-center space-x-1.5 hover:text-cyan-400 transition-colors text-left">
-                <span className="text-slate-500 font-mono text-[10px]">&rarr;</span> <span>Accreditations</span>
+              <button onClick={() => handleNavClick('accredations')} className="flex items-center space-x-1.5 hover:text-white transition-colors text-left">
+                <span className="text-white/40 font-mono text-[10px]">&rarr;</span> <span>Accreditations</span>
               </button>
-              <button onClick={() => handleNavClick('about')} className="flex items-center space-x-1.5 hover:text-cyan-400 transition-colors text-left">
-                <span className="text-slate-500 font-mono text-[10px]">&rarr;</span> <span>About us</span>
+              <button onClick={() => handleNavClick('about')} className="flex items-center space-x-1.5 hover:text-white transition-colors text-left">
+                <span className="text-white/40 font-mono text-[10px]">&rarr;</span> <span>About us</span>
               </button>
-              <button onClick={() => handleNavClick('clientele')} className="flex items-center space-x-1.5 hover:text-cyan-400 transition-colors text-left">
-                <span className="text-slate-500 font-mono text-[10px]">&rarr;</span> <span>Clientele</span>
+              <button onClick={() => handleNavClick('services')} className="flex items-center space-x-1.5 hover:text-white transition-colors text-left">
+                <span className="text-white/40 font-mono text-[10px]">&rarr;</span> <span>Services</span>
               </button>
-              <button onClick={() => handleNavClick('services')} className="flex items-center space-x-1.5 hover:text-cyan-400 transition-colors text-left">
-                <span className="text-slate-500 font-mono text-[10px]">&rarr;</span> <span>Services</span>
-              </button>
-              <button onClick={() => handleNavClick('contact')} className="flex items-center space-x-1.5 hover:text-cyan-400 transition-colors text-left">
-                <span className="text-slate-500 font-mono text-[10px]">&rarr;</span> <span>Contact Us</span>
+              <button onClick={() => handleNavClick('contact')} className="flex items-center space-x-1.5 hover:text-white transition-colors text-left">
+                <span className="text-white/40 font-mono text-[10px]">&rarr;</span> <span>Contact Us</span>
               </button>
             </div>
           </div>
 
           {/* Column 2: QUICK LINKS */}
           <div className="md:col-span-3 space-y-6">
-            <h4 className="text-base font-bold text-cyan-400 uppercase tracking-wider pb-1 inline-block font-display">
+            <h4 className="text-base font-bold text-white uppercase tracking-wider pb-1 inline-block font-display">
               Quick Links
             </h4>
             
-            <div className="flex flex-col space-y-2 text-xs text-slate-350">
+            <div className="flex flex-col space-y-2 text-xs text-white/80">
               {[
                 { label: 'Chemical', tab: 'chemical' },
                 { label: 'Physical', tab: 'physical' },
@@ -72,9 +69,9 @@ export default function Footer({ setCurrentPage, setActiveServiceTab, visitorCou
                     }
                     handleNavClick('services');
                   }}
-                  className="flex items-center space-x-1.5 hover:text-cyan-400 transition-colors text-left"
+                  className="flex items-center space-x-1.5 hover:text-white transition-colors text-left"
                 >
-                  <span className="text-slate-500 font-mono text-[10px]">&rarr;</span> <span>{item.label}</span>
+                  <span className="text-white/40 font-mono text-[10px]">&rarr;</span> <span>{item.label}</span>
                 </button>
               ))}
             </div>
@@ -82,15 +79,15 @@ export default function Footer({ setCurrentPage, setActiveServiceTab, visitorCou
 
           {/* Column 3: GET IN TOUCH */}
           <div className="md:col-span-3 space-y-6">
-            <h4 className="text-base font-bold text-cyan-400 uppercase tracking-wider pb-1 inline-block font-display">
+            <h4 className="text-base font-bold text-white uppercase tracking-wider pb-1 inline-block font-display">
               Get In Touch
             </h4>
             
-            <div className="space-y-4 text-xs text-slate-350">
+            <div className="space-y-4 text-xs text-white/80">
               
               {/* Address */}
               <div className="flex items-start space-x-3">
-                <MapPin className="h-4 w-4 text-cyan-500 shrink-0 mt-0.5" />
+                <MapPin className="h-4 w-4 text-white shrink-0 mt-0.5" />
                 <p className="leading-relaxed">
                   Plot No #30 & 31, Survey No: 196, 197, 198, Rajiv Gandhi Nagar, Moosapet (V), GHMC Kukatpally circle, Balanagar (M), Hyderabad-500037
                 </p>
@@ -98,36 +95,36 @@ export default function Footer({ setCurrentPage, setActiveServiceTab, visitorCou
 
               {/* Emails */}
               <div className="flex items-start space-x-3">
-                <Mail className="h-4 w-4 text-cyan-500 shrink-0 mt-0.5" />
-                <div className="space-y-1">
-                  <p><a href="mailto:info@adeptpharmabio.com" className="hover:text-cyan-400 transition-colors">info@adeptpharmabio.com</a></p>
-                  <p><a href="mailto:agr@adeptpharmabio.com" className="hover:text-cyan-400 transition-colors">agr@adeptpharmabio.com</a></p>
+                <Mail className="h-4 w-4 text-white shrink-0 mt-0.5" />
+                <div className="space-y-1 text-white">
+                  <p><a href="mailto:info@adeptpharmabio.com" className="hover:underline transition-all">info@adeptpharmabio.com</a></p>
+                  <p><a href="mailto:agr@adeptpharmabio.com" className="hover:underline transition-all">agr@adeptpharmabio.com</a></p>
                 </div>
               </div>
 
               {/* Phones */}
               <div className="flex items-start space-x-3">
-                <Phone className="h-4 w-4 text-cyan-500 shrink-0 mt-0.5" />
-                <div className="space-y-1">
-                  <p><a href="tel:+919346619575" className="hover:text-cyan-400 transition-colors">+91 9346619575</a></p>
-                  <p><a href="tel:+917995372062" className="hover:text-cyan-400 transition-colors">+91 7995372062</a></p>
+                <Phone className="h-4 w-4 text-white shrink-0 mt-0.5" />
+                <div className="space-y-1 text-white">
+                  <p><a href="tel:+919346619575" className="hover:underline transition-all">+91 9346619575</a></p>
+                  <p><a href="tel:+917995372062" className="hover:underline transition-all">+91 7995372062</a></p>
                 </div>
               </div>
 
             </div>
 
             {/* Social Media Links */}
-            <div className="pt-4 border-t border-slate-800/80 flex items-center space-x-2.5">
-              <a href="https://www.facebook.com/APBE2012/" target="_blank" rel="noopener noreferrer" className="h-7 w-7 rounded bg-slate-850 hover:bg-cyan-500 hover:text-white flex items-center justify-center transition-colors text-slate-400" title="Facebook">
+            <div className="pt-4 border-t border-white/15 flex items-center space-x-2.5">
+              <a href="https://www.facebook.com/APBE2012/" target="_blank" rel="noopener noreferrer" className="h-7 w-7 rounded bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors" title="Facebook">
                 <Facebook className="h-3.5 w-3.5" />
               </a>
-              <a href="https://www.instagram.com/adeptpharmabio/" target="_blank" rel="noopener noreferrer" className="h-7 w-7 rounded bg-slate-850 hover:bg-cyan-500 hover:text-white flex items-center justify-center transition-colors text-slate-400" title="Instagram">
+              <a href="https://www.instagram.com/adeptpharmabio/" target="_blank" rel="noopener noreferrer" className="h-7 w-7 rounded bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors" title="Instagram">
                 <Instagram className="h-3.5 w-3.5" />
               </a>
-              <a href="#" className="h-7 w-7 rounded bg-slate-850 hover:bg-cyan-500 hover:text-white flex items-center justify-center transition-colors text-slate-400" title="X (Twitter)">
+              <a href="#" className="h-7 w-7 rounded bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors" title="X (Twitter)">
                 <Twitter className="h-3.5 w-3.5" />
               </a>
-              <a href="https://in.linkedin.com/in/adept-pharma-apbepl-7420991a7" target="_blank" rel="noopener noreferrer" className="h-7 w-7 rounded bg-slate-850 hover:bg-cyan-500 hover:text-white flex items-center justify-center transition-colors text-slate-400" title="LinkedIn">
+              <a href="https://in.linkedin.com/in/adept-pharma-apbepl-7420991a7" target="_blank" rel="noopener noreferrer" className="h-7 w-7 rounded bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors" title="LinkedIn">
                 <Linkedin className="h-3.5 w-3.5" />
               </a>
             </div>
@@ -135,11 +132,11 @@ export default function Footer({ setCurrentPage, setActiveServiceTab, visitorCou
 
           {/* Column 4: OUR LOCATION */}
           <div className="md:col-span-3 space-y-6">
-            <h4 className="text-base font-bold text-cyan-400 uppercase tracking-wider pb-1 inline-block font-display">
+            <h4 className="text-base font-bold text-white uppercase tracking-wider pb-1 inline-block font-display">
               Our Location
             </h4>
             <div className="space-y-4">
-              <div className="rounded-xl overflow-hidden border border-slate-800 bg-slate-950 h-40 relative shadow-inner">
+              <div className="rounded-xl overflow-hidden border border-white/15 bg-white/5 h-40 relative shadow-inner">
                 <iframe
                   src="https://maps.google.com/maps?q=Adept%20Pharma%20and%20Bioscience%20Excellence%20Private%20Limited%20Moosapet%20Hyderabad&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   width="100%"
@@ -155,9 +152,9 @@ export default function Footer({ setCurrentPage, setActiveServiceTab, visitorCou
                 href="https://share.google/dqS37xC9GTty8IQNq" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-full py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-lg text-[10px] font-bold uppercase tracking-wider transition-all flex items-center justify-center space-x-1.5 shadow-md shadow-cyan-950/20"
+                className="w-full py-2 bg-white hover:bg-white/90 text-[#004aad] rounded-lg text-[10px] font-bold uppercase tracking-wider transition-all flex items-center justify-center space-x-1.5 shadow-md shadow-blue-900/10"
               >
-                <MapPin className="h-3.5 w-3.5" />
+                <MapPin className="h-3.5 w-3.5 text-[#004aad]" />
                 <span>Get Directions</span>
               </a>
             </div>
@@ -165,14 +162,14 @@ export default function Footer({ setCurrentPage, setActiveServiceTab, visitorCou
 
         </div>
 
-        <div className="pt-6 flex flex-col md:flex-row items-center justify-between text-[11px] text-slate-500 gap-4" id="footer-bottom-row">
+        <div className="pt-6 flex flex-col md:flex-row items-center justify-between text-[11px] text-white/60 gap-4" id="footer-bottom-row">
           <p>Copyright &copy; 2026 Adept Pharma. All right reserved.</p>
-          <div className="flex items-center space-x-2 bg-slate-950/40 border border-slate-800/80 px-3.5 py-1.5 rounded-full text-slate-400 font-mono text-[10px]" id="bottom-visitor-counter">
-            <span className="h-1.5 w-1.5 rounded-full bg-cyan-500 animate-pulse shrink-0" />
-            <span>VISITORS: <strong className="text-cyan-400 font-bold">{visitorCount || 1749554}</strong></span>
+          <div className="flex items-center space-x-2 bg-white/10 border border-white/15 px-3.5 py-1.5 rounded-full text-white font-mono text-[10px]" id="bottom-visitor-counter">
+            <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse shrink-0" />
+            <span>VISITORS: <strong className="text-white font-bold">{visitorCount || 1749554}</strong></span>
           </div>
-          <div className="text-slate-600">
-            Powered By: <a href="https://madroidix.com" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 font-medium transition-colors">Madroidix Technologies Private Limited</a>
+          <div className="text-white/60">
+            Powered By: <a href="https://madroidix.com" target="_blank" rel="noopener noreferrer" className="hover:text-white font-medium transition-colors hover:underline">Madroidix Technologies Private Limited</a>
           </div>
         </div>
 

@@ -18,7 +18,6 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
     { id: 'services', label: 'Services' },
     { id: 'accredations', label: 'Accreditations' },
     { id: 'instrumentation', label: 'Instrumentation' },
-    { id: 'clientele', label: 'Clientele' },
     { id: 'contact', label: 'Contact' },
   ];
 

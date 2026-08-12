@@ -1,4 +1,4 @@
-export type PageId = 'home' | 'about' | 'services' | 'accredations' | 'instrumentation' | 'clientele' | 'contact';
+export type PageId = 'home' | 'about' | 'services' | 'accredations' | 'instrumentation' | 'contact';
 
 export interface ServiceCategory {
   id: string;
