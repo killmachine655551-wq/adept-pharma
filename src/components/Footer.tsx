@@ -23,7 +23,7 @@ export default function Footer({ setCurrentPage, setActiveServiceTab, visitorCou
           {/* Column 1: ADEPT PHARMA */}
           <div className="md:col-span-3 space-y-6">
             <div className="pb-1">
-              <AdeptLogo theme="dark" className="h-12 w-auto" />
+              <AdeptLogo theme="dark" className="h-14 w-auto" />
             </div>
             
             <div className="grid grid-cols-2 gap-x-6 gap-y-2 text-xs text-white/80">

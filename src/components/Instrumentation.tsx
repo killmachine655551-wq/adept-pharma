@@ -79,8 +79,7 @@ export default function Instrumentation() {
       capacity: [
         'Shimadzu GC 2010 Plus',
         'Shimadzu Nexis 2030 With HS-20NX',
-        'Agilent GC 8890',
-        'Agilent 8697HS'
+        'Agilent GC 8890 With 8697HS'
       ],
       image: gcImg,
       specifications: [
@@ -96,14 +95,12 @@ export default function Instrumentation() {
       model: 'Nexion 2000 with MDS',
       manufacturer: 'Perkin Elmer',
       category: 'spectroscopy',
-      description: 'Inductively Coupled Plasma Mass Spectrometer integrated with Microwave Digestion System (MDS). Definitive standard for elemental assays and heavy metal screenings.',
-      capacity: ['Perkin Elmer Nexion 2000', 'Microwave Digestion System (MDS)'],
+      description: 'Inductively Coupled Plasma Mass Spectrometer integrated with Microwave Digestion System (MDS).',
+      capacity: ['Perkin Elmer Nexion 2000', 'Titan MPS'],
       image: icpmsImg,
       specifications: [
         'Nexion 2000 multi-element scan interface',
-        'Microwave Digestion System (MDS) sample prep',
-        'Parts-per-trillion (ppt) elemental sensitivity limits',
-        'Collision and reaction cell interference removal'
+        'Microwave Digestion System (MDS) sample prep'
       ],
       utility: 'USP <232>/<233> elemental impurities validations, catalyst metal analysis, and trace heavy metals.'
     },
@@ -130,14 +127,12 @@ export default function Instrumentation() {
       model: 'Bruker ALPHA',
       manufacturer: 'Bruker',
       category: 'spectroscopy',
-      description: 'Compact Fourier Transform Infrared Spectrometer equipped with Attenuated Total Reflection (ATR) modules. Enables fast, non-destructive chemical identity validation.',
+      description: 'Compact Fourier Transform Infrared Spectrometer equipped with Attenuated Total Reflection (ATR) modules.',
       capacity: ['Bruker ALPHA FT-IR System'],
       image: ftirImg,
       specifications: [
         'Bruker ALPHA FT-IR optical bench',
-        'High-performance Attenuated Total Reflection (ATR)',
-        'RockSolid permanent-aligned interferometer core',
-        'Direct spectral library comparison algorithms'
+        'High-performance Attenuated Total Reflection (ATR)'
       ],
       utility: 'Raw material chemical identification, excipient conformance verification, and chemical structural checks.'
     },
@@ -145,12 +140,18 @@ export default function Instrumentation() {
       id: 'karl-fischer-analytics',
       name: 'Karl Fischer Moisture Titrator & Coulometer',
       model: 'Titroline 7750 / 7500 KF Trac',
-      manufacturer: 'SI Analytics',
+      manufacturer: 'Metrohm / SI Analytics',
       category: 'wet-analytics',
       description: 'High-precision volumetric and coulometric titrators for moisture analysis. Essential for hygroscopic formulations where trace water triggers degradation.',
-      capacity: ['SI Analytics Titroline 7750', 'SI Analytics 7500 KF Trac'],
+      capacity: [
+        'Metrohm KF809 Titrando & 836 Titrando',
+        'SI Analytics Titroline 7750',
+        'SI Analytics 7500 KF Trac'
+      ],
       image: karlFischerImg,
       specifications: [
+        'Metrohm KF809 Titrando volumetric analysis modules',
+        'Metrohm 836 Titrando coulometric titration cells',
         'Titroline 7750 Volumetric titrator assembly',
         '7500 KF Trac Coulometer for trace moisture titration',
         'Hermetically sealed glass titration cells',
