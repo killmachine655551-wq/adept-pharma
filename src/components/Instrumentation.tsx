@@ -145,15 +145,12 @@ export default function Instrumentation() {
       description: 'High-precision volumetric and coulometric titrators for moisture analysis. Essential for hygroscopic formulations where trace water triggers degradation.',
       capacity: [
         'Metrohm KF809 Titrando & 836 Titrando',
-        'SI Analytics Titroline 7750',
-        'SI Analytics 7500 KF Trac'
+        'SI Analytics Titroline 7750'
       ],
       image: karlFischerImg,
       specifications: [
-        'Metrohm KF809 Titrando volumetric analysis modules',
-        'Metrohm 836 Titrando coulometric titration cells',
+        'Metrohm KF809 Titrando & 836 Titrando Titration Modules',
         'Titroline 7750 Volumetric titrator assembly',
-        '7500 KF Trac Coulometer for trace moisture titration',
         'Hermetically sealed glass titration cells',
         'Automatic drift compensation algorithm'
       ],
@@ -163,13 +160,14 @@ export default function Instrumentation() {
       id: 'dissolution-lab-india',
       name: '8-Station Dissolution Tester',
       model: 'DS8000',
-      manufacturer: 'Lab India',
+      manufacturer: 'Lab India / Electrolab',
       category: 'wet-analytics',
       description: 'USP apparatus testing bath supporting paddles and baskets. Essential for evaluating active release curves of capsules and tablets.',
-      capacity: ['Lab India DS8000'],
+      capacity: ['Lab India DS8000', 'Electrolab Trust-E08'],
       image: dissolutionImg,
       specifications: [
         'Lab India DS8000 compendial testing array',
+        'Electrolab Trust-E08 dissolution testing system',
         'Paddles (USP Type 2) & Baskets (USP Type 1) accessories',
         'Precise temp controls (±0.1°C range)',
         'Programmable multi-interval sampling cycles'
@@ -179,14 +177,14 @@ export default function Instrumentation() {
     {
       id: 'toc-shimadzu-carbon',
       name: 'Total Organic Carbon (TOC) Analyzer',
-      model: 'LCPH E200 ROHS',
+      model: 'TOC-L',
       manufacturer: 'Shimadzu',
       category: 'wet-analytics',
       description: 'Shimadzu TOC analyzer for trace carbon determination in purified water and cleaning validation rinse samples.',
-      capacity: ['Shimadzu LCPH E200 RoHS System'],
+      capacity: ['Shimadzu TOC-L'],
       image: tocImg,
       specifications: [
-        'Shimadzu LCPH E200 RoHS compliant analyzer',
+        'Shimadzu TOC-L analyzer',
         'Highly precise wet oxidation & combustion paths',
         'Automatic inorganic carbon removal',
         'Supports small volume liquid injection'
@@ -209,40 +207,6 @@ export default function Instrumentation() {
         'Integrated USP <788> reporting software'
       ],
       utility: 'USP <788> sub-visible particulate count assays in parenterals, injections, and ophthalmics.'
-    },
-    {
-      id: 'laminar-biosafety-chambers',
-      name: 'Sterile Benches & Biosafety Cabinets',
-      model: 'FA/LF/6/1236 & FA/BSC/7/1239',
-      manufacturer: 'Jayasri / Biotechnics India',
-      category: 'stability-micro',
-      description: 'HEPA-filtered laminar benches and Class II Biosafety cabinets for sterile microbiological work and inoculation procedures.',
-      capacity: ['Jayasri JS/LF/6/1236 Bench', 'Biotechnics FA/BSC/7/1239 Cabinet'],
-      image: laminarImg,
-      specifications: [
-        'Jayasri Laminar Flow Bench JS/LF/6/1236',
-        'Biotechnics Biosafety Cabinet FA/BSC/7/1239',
-        'HEPA filter efficiency: 99.97% down to 0.3 µm',
-        'Continuous air velocity monitors and UV cycles'
-      ],
-      utility: 'Sterility assays, raw sample inoculations, microbial limit testing, and bioburden validations.'
-    },
-    {
-      id: 'incubators-autoclaves-micro',
-      name: 'GMP Incubators, Autoclaves & BOD Chambers',
-      model: 'JS/B.I/G.M.P & JS/B.O.D/G.M.P',
-      manufacturer: 'Jayasri Lab Instruments',
-      category: 'stability-micro',
-      description: 'Precision temperature chambers and high-pressure steam sterilizers for culture incubation, storage validation, and media prep.',
-      capacity: ['Jayasri Bacteriological Incubator JS/B.I/G.M.P', 'Jayasri BOD Incubator JS/B.O.D/G.M.P', 'Jayasri Vertical Autoclave Sterilization Unit'],
-      image: incubatorImg,
-      specifications: [
-        'Jayasri Bacteriological Incubator JS/B.I/G.M.P',
-        'Jayasri BOD Incubator JS/B.O.D/G.M.P',
-        'Jayasri vertical autoclave sterilization units',
-        'Continuous temperature recording and alarm trails'
-      ],
-      utility: 'Microbial culture incubation, biological validation controls, sterilization, and storage validation.'
     }
   ];
 
@@ -273,7 +237,7 @@ export default function Instrumentation() {
     { name: 'CONDUCTIVITY METER', make: 'SYSTRONICS', model: 'CM-304', category: 'wet-analytics' },
     { name: 'MUFFLE FURNACE', make: 'HITECH INDIA', model: 'NA', category: 'wet-analytics' },
     { name: 'HOT AIR OVEN', make: 'HITECH INDIA', model: 'NA', category: 'wet-analytics' },
-    { name: 'TOC (Total Organic Carbon) ANALYZER', make: 'SHIMADZU', model: 'LCPH E200 ROHS', category: 'wet-analytics' },
+    { name: 'TOC (Total Organic Carbon) ANALYZER', make: 'SHIMADZU', model: 'TOC-L', category: 'wet-analytics' },
     { name: 'NEPHELO TURBIDITY METER', make: 'ELICO', model: 'CL 52D', category: 'wet-analytics' },
     { name: 'DIGITAL ULTRASONIC CLEANER', make: 'LABMAN', model: 'LMUC SERIES', category: 'wet-analytics' },
     { name: 'WATER BATH', make: 'JAYASRI LAB INSTRUMENTS', model: 'NA', category: 'wet-analytics' },

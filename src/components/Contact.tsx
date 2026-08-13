@@ -97,7 +97,7 @@ export default function Contact({ prefilledCategory }: ContactProps) {
         
         <div className="relative z-10 w-full max-w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 text-left space-y-4">
           <span className="text-xs font-mono tracking-widest text-cyan-400 uppercase">SUBMIT AN INQUIRY OR RUN PROTOCOL</span>
-          <h1 className="font-display text-4xl md:text-5xl font-bold tracking-tight">Initiate Analytical Studies</h1>
+          <h1 className="font-display text-4xl md:text-5xl font-bold tracking-tight">Contact Us</h1>
           <p className="text-slate-350 text-base md:text-lg max-w-2xl leading-relaxed">
             Contact our regulatory intake desk to discuss study parameters, custom validation designs, or request sample shipment barcodes.
           </p>
@@ -110,61 +110,46 @@ export default function Contact({ prefilledCategory }: ContactProps) {
           
           {/* Left: Contact Info & Secure Sample Shipping */}
           <div className="lg:col-span-5 space-y-8" id="contact-information-panel">
-            <div className="space-y-4">
-              <span className="text-xs font-bold uppercase tracking-wider text-blue-600 block">ADEPT CENTRAL REGISTRY</span>
-              <h2 className="font-display text-2xl md:text-3xl font-bold text-slate-950">Intake Logistics</h2>
-              <p className="text-slate-500 text-sm leading-relaxed">
-                We accept physical molecular samples under strict environmental guidelines. Review our physical shipping protocols below prior to parcel labeling.
-              </p>
+            <div className="space-y-3">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-slate-950">Get In Touch</h2>
             </div>
 
             {/* Direct Contact specs */}
-            <div className="space-y-4" id="direct-contact-specs">
+            <div className="space-y-5" id="direct-contact-specs">
               <div className="flex items-start space-x-3 text-slate-600 text-xs sm:text-sm">
                 <MapPin className="h-5 w-5 text-cyan-600 shrink-0 mt-0.5" />
                 <div>
                   <p className="font-bold text-slate-800">Adept Pharma Central Facility</p>
-                  <p className="mt-0.5">Plot No #30 & 31, Survey No: 196, 197, 198,<br />Rajiv Gandhi Nagar, Moosapet (V),<br />GHMC Kukatpally circle, Balanagar (M),<br />Hyderabad-500037, Telangana, India</p>
+                  <p className="mt-0.5">Plot No. 30 & 31 ; Survey No. 196, 197 & 198,<br />Prashanth Nagar, Kukatpally,<br />Medchal Malkajgiri (D),<br />Hyderabad - 500037, Telangana , India</p>
                 </div>
               </div>
               
               <div className="flex items-start space-x-3 text-slate-600 text-xs sm:text-sm">
                 <Phone className="h-5 w-5 text-cyan-600 shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-bold text-slate-800">Call Us</p>
-                  <p className="mt-0.5">+91 9346619575 / +91 7995372062<br />Hours: Mon-Sat, 9:30 AM - 6:30 PM IST</p>
+                  <p className="font-bold text-slate-800 mb-1">Call Us</p>
+                  <p className="font-semibold text-slate-800 text-xs mt-0.5">Mobile:</p>
+                  <ul className="space-y-0.5 text-slate-600 mb-1.5">
+                    <li className="flex items-center"><span className="text-cyan-500 font-bold mr-1.5">•</span> +91 9346619575</li>
+                    <li className="flex items-center"><span className="text-cyan-500 font-bold mr-1.5">•</span> +91 8886310004</li>
+                    <li className="flex items-center"><span className="text-cyan-500 font-bold mr-1.5">•</span> +91 7995005438</li>
+                  </ul>
+                  <p className="mt-1 text-xs"><span className="font-semibold text-slate-800">Landline:</span> 040-23079575 / 76</p>
+                  <p className="mt-1 text-xs"><span className="font-semibold text-slate-800">Hours:</span> Mon-Sat, 9:30 AM - 6:30 PM IST</p>
                 </div>
               </div>
 
               <div className="flex items-start space-x-3 text-slate-600 text-xs sm:text-sm">
                 <Mail className="h-5 w-5 text-cyan-600 shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-bold text-slate-800">Email Us</p>
-                  <p className="mt-0.5">info@adeptpharmabio.com<br />agr@adeptpharmabio.com / bdm@adeptpharmabio.com</p>
+                  <p className="font-bold text-slate-800 mb-1">Email Us</p>
+                  <ul className="space-y-1 text-slate-600">
+                    <li className="flex items-center"><span className="text-cyan-500 font-bold mr-1.5">•</span> info@adeptpharmabio.com</li>
+                    <li className="flex items-center"><span className="text-cyan-500 font-bold mr-1.5">•</span> agr@adeptpharmabio.com</li>
+                    <li className="flex items-center"><span className="text-cyan-500 font-bold mr-1.5">•</span> bdm@adeptpharmabio.com</li>
+                  </ul>
                 </div>
               </div>
-            </div>
-
-            {/* Shipments requirements card */}
-            <div className="p-5 bg-gradient-to-br from-cyan-50 to-blue-50/40 rounded-xl border border-cyan-100 space-y-4" id="shipment-requirements-card">
-              <div className="flex items-center space-x-2 text-cyan-800 font-bold text-xs uppercase tracking-wider">
-                <Truck className="h-4.5 w-4.5 text-cyan-600" />
-                <span>Physical sample shipping rules</span>
-              </div>
-              <ul className="space-y-3 text-xs text-slate-600">
-                <li className="flex items-start space-x-2">
-                  <span className="text-cyan-500 font-bold shrink-0">•</span>
-                  <span><strong>Cold Chain:</strong> Lyophilized materials or peptides requiring frozen storage (-20°C) must be shipped in validated dry ice boxes with active temp monitors.</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <span className="text-cyan-500 font-bold shrink-0">•</span>
-                  <span><strong>SDS Requirement:</strong> All submissions must pack a corresponding Safety Data Sheet (SDS) outside the secondary package sleeve.</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <span className="text-cyan-500 font-bold shrink-0">•</span>
-                  <span><strong>LIMS Coding:</strong> Do not label vials with full chemical details for proprietary security. Use custom barcodes issued upon inquiry validation.</span>
-                </li>
-              </ul>
             </div>
           </div>
 
@@ -185,19 +170,18 @@ export default function Contact({ prefilledCategory }: ContactProps) {
                     <div className="pb-4 border-b border-slate-100 flex items-center space-x-2.5">
                       <ClipboardCheck className="h-5.5 w-5.5 text-cyan-600" />
                       <div>
-                        <h3 className="font-display font-bold text-slate-900 text-lg">Testing Study Submission Form</h3>
-                        <p className="text-[10px] text-slate-400 font-mono">ALL SUBMISSIONS UNDER SECURE NDAs BY DEFAULT</p>
+                        <h3 className="font-display font-bold text-slate-900 text-lg">Inquire Now</h3>
                       </div>
                     </div>
 
                     {/* Section 1: Contact meta */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="space-y-1.5">
-                        <label className="text-xs font-bold text-slate-700">Client Contact Name *</label>
+                        <label className="text-xs font-bold text-slate-700">Name *</label>
                         <input 
                           type="text" 
                           required
-                          placeholder="e.g. Dr. Jane Doe"
+                          placeholder=""
                           value={formData.fullName}
                           onChange={(e) => setFormData(prev => ({ ...prev, fullName: e.target.value }))}
                           className="w-full text-sm border border-slate-200 rounded-lg p-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500"
@@ -205,11 +189,11 @@ export default function Contact({ prefilledCategory }: ContactProps) {
                       </div>
                       
                       <div className="space-y-1.5">
-                        <label className="text-xs font-bold text-slate-700">Company / Entity Name *</label>
+                        <label className="text-xs font-bold text-slate-700">Company Name *</label>
                         <input 
                           type="text" 
                           required
-                          placeholder="e.g. BioTherapeutics Inc."
+                          placeholder=""
                           value={formData.companyName}
                           onChange={(e) => setFormData(prev => ({ ...prev, companyName: e.target.value }))}
                           className="w-full text-sm border border-slate-200 rounded-lg p-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500"
@@ -217,11 +201,11 @@ export default function Contact({ prefilledCategory }: ContactProps) {
                       </div>
 
                       <div className="space-y-1.5">
-                        <label className="text-xs font-bold text-slate-700">Corporate Email *</label>
+                        <label className="text-xs font-bold text-slate-700">E-mail *</label>
                         <input 
                           type="email" 
                           required
-                          placeholder="j.doe@biotherapeutics.com"
+                          placeholder=""
                           value={formData.email}
                           onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
                           className="w-full text-sm border border-slate-200 rounded-lg p-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500"
@@ -229,10 +213,10 @@ export default function Contact({ prefilledCategory }: ContactProps) {
                       </div>
 
                       <div className="space-y-1.5">
-                        <label className="text-xs font-bold text-slate-700">Direct Telephone</label>
+                        <label className="text-xs font-bold text-slate-700">Mobile Number</label>
                         <input 
                           type="tel" 
-                          placeholder="+1 (555) 000-0000"
+                          placeholder=""
                           value={formData.phone}
                           onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
                           className="w-full text-sm border border-slate-200 rounded-lg p-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500"
@@ -245,7 +229,7 @@ export default function Contact({ prefilledCategory }: ContactProps) {
                       <textarea 
                         rows={4}
                         required
-                        placeholder="Please enter the details of your inquiry here..."
+                        placeholder=""
                         value={formData.additionalNotes}
                         onChange={(e) => setFormData(prev => ({ ...prev, additionalNotes: e.target.value }))}
                         className="w-full text-sm border border-slate-200 rounded-lg p-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 font-sans"

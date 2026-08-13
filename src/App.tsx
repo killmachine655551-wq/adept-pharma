@@ -11,7 +11,10 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<PageId>('home');
+  const [currentPage, setCurrentPage] = useState<PageId>(() => {
+    const stored = localStorage.getItem('adept_current_page');
+    return (stored as PageId) || 'home';
+  });
   const [selectedServiceCategory, setSelectedServiceCategory] = useState<string>('');
   const [activeServiceTab, setActiveServiceTab] = useState<string>('chemical');
 
@@ -24,6 +27,7 @@ export default function App() {
   });
 
   useEffect(() => {
+    localStorage.setItem('adept_current_page', currentPage);
     // Increment page views on tab/page change
     setPageViews(prev => {
       const next = prev + 1;
@@ -72,7 +76,7 @@ export default function App() {
           className="cursor-pointer"
         >
           <span className="inline-block px-4">
-            Approved Testing Laboratory by National Accreditation Board for Testing and Calibration Laboratories (NABL) , Quality Council of India &nbsp;&nbsp;||&nbsp;&nbsp; Approved Testing Laboratory by CDSCO, New Delhi &nbsp;&nbsp;||&nbsp;&nbsp; Approved Testing Laboratory by DCA, State of Telangana &nbsp;&nbsp;||&nbsp;&nbsp; GLP- Certified &nbsp;&nbsp;||&nbsp;&nbsp; Accredited by ISO 9001:2015 &nbsp;&nbsp;||&nbsp;&nbsp; Accredited by OHSAS 18001:2007
+            Approved Testing Laboratory by National Accreditation Board for Testing and Calibration Laboratories (NABL) , Quality Council of India &nbsp;&nbsp;||&nbsp;&nbsp; Approved Testing Laboratory by CDSCO, New Delhi &nbsp;&nbsp;||&nbsp;&nbsp; Approved Testing Laboratory by DCA, State of Telangana &nbsp;&nbsp;||&nbsp;&nbsp; GLP- Certified &nbsp;&nbsp;||&nbsp;&nbsp; Accredited by ISO 9001:2015 &nbsp;&nbsp;||&nbsp;&nbsp; Accredited by ISO 45001:2018
           </span>
         </marquee>
       </div>

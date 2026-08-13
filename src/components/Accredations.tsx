@@ -47,11 +47,11 @@ export default function Accredations({ setCurrentPage }: AccredationsProps) {
       description: 'ISO 9001:2015 certification for Quality Management Systems, certifying operational trace records logging, analytical calibrations, and complete data integrity protocols.'
     },
     {
-      title: 'APPROVED TESTING LABORATORY BY OHSAS 18001:2007',
+      title: 'APPROVED TESTING LABORATORY BY ISO 45001:2018',
       image: ohsasImg,
       subtitle: 'Occupational Health & Safety Standard',
       icon: <ShieldCheck className="h-5 w-5 text-red-600" />,
-      description: 'Occupational Health and Safety Assessment Series certification, validating strict conformance to workplace safety regulations and hazard-free clinical laboratory operations.'
+      description: 'ISO 45001:2018 certification for Occupational Health & Safety Management Systems, validating strict conformance to workplace safety regulations and hazard-free clinical laboratory operations.'
     },
     {
       title: 'FDA REGISTERED',

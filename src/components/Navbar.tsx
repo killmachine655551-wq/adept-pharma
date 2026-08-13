@@ -76,7 +76,7 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
           >
             <span className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-600" />
             <span className="relative flex items-center space-x-1.5 rounded-full bg-slate-900/1 px-5 py-2 transition-colors duration-300 hover:bg-slate-900/0">
-              <span className="text-sm font-semibold tracking-wide">Request Testing</span>
+              <span className="text-sm font-semibold tracking-wide">Contact Us</span>
               <ChevronRight className="h-4 w-4 animate-bounce" />
             </span>
           </button>
@@ -137,7 +137,7 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
                   onClick={() => handleNavClick('contact')}
                   className="flex items-center justify-center space-x-2 w-full py-3.5 text-sm font-semibold text-white bg-gradient-to-r from-cyan-400 to-blue-600 rounded-lg shadow-md hover:from-cyan-500 hover:to-blue-700 transition-all"
                 >
-                  <span>Request Testing Quote</span>
+                  <span>Contact Us</span>
                   <ChevronRight className="h-4 w-4" />
                 </button>
               </div>
