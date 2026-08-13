@@ -131,7 +131,7 @@ export default function Contact({ prefilledCategory }: ContactProps) {
               <div className="flex items-start space-x-3 text-slate-600 text-xs sm:text-sm">
                 <Phone className="h-5 w-5 text-cyan-600 shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-bold text-slate-800">Analytical Intake Desk</p>
+                  <p className="font-bold text-slate-800">Call Us</p>
                   <p className="mt-0.5">+91 9346619575 / +91 7995372062<br />Hours: Mon-Sat, 9:30 AM - 6:30 PM IST</p>
                 </div>
               </div>
@@ -139,7 +139,7 @@ export default function Contact({ prefilledCategory }: ContactProps) {
               <div className="flex items-start space-x-3 text-slate-600 text-xs sm:text-sm">
                 <Mail className="h-5 w-5 text-cyan-600 shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-bold text-slate-800">Digital Communications</p>
+                  <p className="font-bold text-slate-800">Email Us</p>
                   <p className="mt-0.5">info@adeptpharmabio.com<br />agr@adeptpharmabio.com / bdm@adeptpharmabio.com</p>
                 </div>
               </div>

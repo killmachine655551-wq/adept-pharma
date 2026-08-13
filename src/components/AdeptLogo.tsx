@@ -65,7 +65,7 @@ export default function AdeptLogo({
       <img
         src={isDark ? logoDark : logoLight}
         alt="Adept Pharma"
-        className="h-10 w-auto object-contain"
+        className="h-12 w-auto object-contain"
       />
     </div>
   );

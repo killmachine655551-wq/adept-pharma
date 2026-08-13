@@ -15,7 +15,7 @@ export interface Instrument {
   manufacturer: string;
   description: string;
   category: string;
-  capacity: string;
+  capacity: string | string[];
   image: string;
   specifications: string[];
   utility: string;

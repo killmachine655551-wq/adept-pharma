@@ -40,31 +40,30 @@ export default function Instrumentation() {
       id: 'hplc-waters-agilent',
       name: 'High Performance Liquid Chromatography (HPLC)',
       model: '2690 Alliance / 1100 / 1260 Infinity',
-      manufacturer: 'Waters / Agilent',
+      manufacturer: 'Waters / Agilent / Shimadzu',
       category: 'chromatography',
-      description: 'High-resolution chromatographic validation system with fully automated injection paths. Configured with UV & Photo-Diode Array (PDA) detectors for pharmaceutical potency verification and related substance profiles.',
-      capacity: 'Waters 2690, Agilent 1100, and Agilent 1260 Infinity systems',
+      description: 'High-resolution chromatographic validation system with fully automated injection paths. Configured with UV, Photo-Diode Array (PDA) and Refractive Index (RI) detectors for pharmaceutical potency verification and related substance profiles.',
+      capacity: ['Shimadzu LC-1250C', 'Waters e2695', 'Agilent 1260 Infinity'],
       image: hplcImg,
       specifications: [
-        'Detector range: UV/Vis & Photo-Diode Array (PDA)',
+        'Detector range: UV/Vis, Photo-Diode Array (PDA) and Refractive Index Detector',
         'Fully-automated autosamplers with temperature controls',
         'Precise multi-channel solvent delivery modules',
-        'Continuous peak integration software'
+        'Empower and LabSolutions'
       ],
-      utility: 'API Assay quantitation, stability sample profiling, related substances, and method validations.'
+      utility: 'API Assay quantitation, stability sample profiling, related substances, and method validations/verifications.'
     },
     {
       id: 'lcms-triple-quad',
       name: 'Liquid Chromatography Mass Spectrometer (LC-MS/MS)',
       model: 'Shimadzu Triple Quadrupole 8045',
-      manufacturer: 'Shimadzu',
+      manufacturer: 'Shimadzu / LabSolutions',
       category: 'chromatography',
-      description: 'Ultra-sensitive liquid chromatograph coupled with a triple quadrupole mass spectrometer. Engineered for trace-level impurity scans, genotoxic assays, and molecular weight determinations.',
-      capacity: 'Parts-per-billion (ppb) scanning limits',
+      description: 'Liquid chromatograph coupled with a triple quadrupole mass spectrometer. Engineered for trace-level impurity scans, genotoxic assays, and molecular weight determinations.',
+      capacity: ['LC-2050C', 'MS-8045'],
       image: lcmsImg,
       specifications: [
         'Shimadzu LCMS-8045 Triple Quadrupole System',
-        'Ultra-fast scanning (UFMS) electronics',
         'Equipped with ESI and APCI ion sources',
         'Automated peak profiling and library match algorithms'
       ],
@@ -73,16 +72,20 @@ export default function Instrumentation() {
     {
       id: 'gc-headspace-shimadzu',
       name: 'Gas Chromatography with Headspace (GC-HS)',
-      model: 'GC 2010 Plus / Nexis / GC-2900A',
-      manufacturer: 'Shimadzu / Netel',
+      model: 'GC 2010 Plus / Nexis',
+      manufacturer: 'Shimadzu / Agilent',
       category: 'chromatography',
       description: 'High-resolution gas chromatographs equipped with automated static headspace samplers. Optimized for residual solvents quantitation and volatile trace compound profiling.',
-      capacity: 'Integrated multi-vial headspace sampler',
+      capacity: [
+        'Shimadzu GC 2010 Plus',
+        'Shimadzu Nexis 2030 With HS-20NX',
+        'Agilent GC 8890',
+        'Agilent 8697HS'
+      ],
       image: gcImg,
       specifications: [
         'Flame Ionization Detector (FID)',
-        'Shimadzu Nexis / Netel Analyte GC-2900A modules',
-        'Electronic Flow Control (EPC) for gas delivery paths',
+        'Shimadzu Nexis modules',
         'Wide temperature range column ovens'
       ],
       utility: 'USP <467> residual solvent profiling, volatile organic impurities, and agrochemical validations.'
@@ -94,7 +97,7 @@ export default function Instrumentation() {
       manufacturer: 'Perkin Elmer',
       category: 'spectroscopy',
       description: 'Inductively Coupled Plasma Mass Spectrometer integrated with Microwave Digestion System (MDS). Definitive standard for elemental assays and heavy metal screenings.',
-      capacity: 'Multi-element trace assays in ppt range',
+      capacity: ['Perkin Elmer Nexion 2000', 'Microwave Digestion System (MDS)'],
       image: icpmsImg,
       specifications: [
         'Nexion 2000 multi-element scan interface',
@@ -111,7 +114,7 @@ export default function Instrumentation() {
       manufacturer: 'Malvern',
       category: 'spectroscopy',
       description: 'Laser diffraction particle sizing system. Critical for drug solubility profiling, dissolution kinetics, and batch particle conformance reviews.',
-      capacity: '0.01 µm to 3500 µm range',
+      capacity: ['Malvern Mastersizer 3000'],
       image: particleSizeImg,
       specifications: [
         'Malvern Mastersizer 3000 optical cell',
@@ -128,7 +131,7 @@ export default function Instrumentation() {
       manufacturer: 'Bruker',
       category: 'spectroscopy',
       description: 'Compact Fourier Transform Infrared Spectrometer equipped with Attenuated Total Reflection (ATR) modules. Enables fast, non-destructive chemical identity validation.',
-      capacity: 'Solid, liquid, and paste ATR sample plates',
+      capacity: ['Bruker ALPHA FT-IR System'],
       image: ftirImg,
       specifications: [
         'Bruker ALPHA FT-IR optical bench',
@@ -145,7 +148,7 @@ export default function Instrumentation() {
       manufacturer: 'SI Analytics',
       category: 'wet-analytics',
       description: 'High-precision volumetric and coulometric titrators for moisture analysis. Essential for hygroscopic formulations where trace water triggers degradation.',
-      capacity: '10 ppm to 100% water content tracking',
+      capacity: ['SI Analytics Titroline 7750', 'SI Analytics 7500 KF Trac'],
       image: karlFischerImg,
       specifications: [
         'Titroline 7750 Volumetric titrator assembly',
@@ -162,7 +165,7 @@ export default function Instrumentation() {
       manufacturer: 'Lab India',
       category: 'wet-analytics',
       description: 'USP apparatus testing bath supporting paddles and baskets. Essential for evaluating active release curves of capsules and tablets.',
-      capacity: '8-vessel assembly with automated sampling lines',
+      capacity: ['Lab India DS8000'],
       image: dissolutionImg,
       specifications: [
         'Lab India DS8000 compendial testing array',
@@ -179,7 +182,7 @@ export default function Instrumentation() {
       manufacturer: 'Shimadzu',
       category: 'wet-analytics',
       description: 'Shimadzu TOC analyzer for trace carbon determination in purified water and cleaning validation rinse samples.',
-      capacity: 'Sub-ppb carbon verification limit',
+      capacity: ['Shimadzu LCPH E200 RoHS System'],
       image: tocImg,
       specifications: [
         'Shimadzu LCPH E200 RoHS compliant analyzer',
@@ -196,7 +199,7 @@ export default function Instrumentation() {
       manufacturer: 'HIAC COMPANY',
       category: 'spectroscopy',
       description: 'Laser particle counter for sub-visible particulate matter evaluation in injectables and ophthalmic solutions as per USP <788>.',
-      capacity: '1.3 µm to 600 µm particle size scans',
+      capacity: ['HIAC 9703+ System'],
       image: hiacImg,
       specifications: [
         'HIAC 9703+ micro particulate counting system',
@@ -213,7 +216,7 @@ export default function Instrumentation() {
       manufacturer: 'Jayasri / Biotechnics India',
       category: 'stability-micro',
       description: 'HEPA-filtered laminar benches and Class II Biosafety cabinets for sterile microbiological work and inoculation procedures.',
-      capacity: 'ISO Class 5 sterile workspaces',
+      capacity: ['Jayasri JS/LF/6/1236 Bench', 'Biotechnics FA/BSC/7/1239 Cabinet'],
       image: laminarImg,
       specifications: [
         'Jayasri Laminar Flow Bench JS/LF/6/1236',
@@ -230,7 +233,7 @@ export default function Instrumentation() {
       manufacturer: 'Jayasri Lab Instruments',
       category: 'stability-micro',
       description: 'Precision temperature chambers and high-pressure steam sterilizers for culture incubation, storage validation, and media prep.',
-      capacity: 'Calibrated G.M.P standard enclosures',
+      capacity: ['Jayasri Bacteriological Incubator JS/B.I/G.M.P', 'Jayasri BOD Incubator JS/B.O.D/G.M.P', 'Jayasri Vertical Autoclave Sterilization Unit'],
       image: incubatorImg,
       specifications: [
         'Jayasri Bacteriological Incubator JS/B.I/G.M.P',
@@ -249,7 +252,6 @@ export default function Instrumentation() {
     { name: 'HPLC with UV & PDA Detector & Auto Sampler', make: 'AGILENT', model: '1260-INFINITY', category: 'chromatography' },
     { name: 'LCMS/MS (Liquid Chromatography Mass Spec)', make: 'SHIMADZU', model: 'Triple Quadrupole 8045', category: 'chromatography' },
     { name: 'GC - HSS (Gas Chromatograph Headspace)', make: 'SHIMADZU', model: 'GC 2010', category: 'chromatography' },
-    { name: 'GC - HSS (Gas Chromatograph Headspace)', make: 'NETEL', model: 'ANALYTE GC-2900A', category: 'chromatography' },
     { name: 'GC-HS (Gas Chromatography Nexis)', make: 'SHIMADZU', model: 'Nexis', category: 'chromatography' },
     { name: 'Ionic Chromatography', make: 'IC_Compact', model: 'NA', category: 'chromatography' },
     { name: 'RI Detector', make: 'SHIMADZU', model: 'NA', category: 'chromatography' },
@@ -399,8 +401,7 @@ export default function Instrumentation() {
                     </div>
                   </div>
 
-                  <div className="p-6 text-left space-y-3">
-                    <span className="text-[10px] font-mono font-semibold text-slate-400 block uppercase tracking-wider">{instrument.model}</span>
+                  <div className="p-6 pb-4 text-left space-y-2">
                     <h3 className="font-display text-base sm:text-lg font-bold text-slate-900 group-hover:text-blue-700 transition-colors">{instrument.name}</h3>
                     <p className="text-slate-500 text-xs sm:text-sm line-clamp-3 leading-relaxed">{instrument.description}</p>
                   </div>
@@ -514,9 +515,8 @@ export default function Instrumentation() {
               </div>
 
               <div className="p-6 space-y-5 max-h-[60vh] overflow-y-auto">
-                <div className="space-y-1.5 text-left">
-                  <span className="text-[10px] bg-cyan-50 px-2.5 py-0.5 rounded text-cyan-600 font-bold border border-cyan-100 font-mono">MODEL: {selectedInstrument.model}</span>
-                  <p className="text-slate-600 text-sm leading-relaxed pt-2">{selectedInstrument.description}</p>
+                <div className="text-left">
+                  <p className="text-slate-600 text-sm leading-relaxed">{selectedInstrument.description}</p>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-3 border-t border-slate-100 text-left">
@@ -538,14 +538,20 @@ export default function Instrumentation() {
                   <div className="space-y-2">
                     <span className="text-xs font-bold text-slate-500 uppercase tracking-wider flex items-center space-x-1.5">
                       <Calendar className="h-4 w-4 text-cyan-500" />
-                      <span>Capacity & Loading</span>
+                      <span>Make & Model</span>
                     </span>
-                    <p className="text-xs text-slate-650 leading-relaxed">{selectedInstrument.capacity}</p>
-
-                    <div className="bg-emerald-50/50 p-2.5 rounded-lg border border-emerald-100 mt-2">
-                      <p className="text-[10px] font-bold text-emerald-700 uppercase tracking-wider">Calibration Compliance</p>
-                      <p className="text-[10px] text-emerald-600 mt-0.5">Calibrated under master NIST guidelines. Last certified: Current month. Due: In 6 months.</p>
-                    </div>
+                    {Array.isArray(selectedInstrument.capacity) ? (
+                      <ul className="space-y-1.5">
+                        {selectedInstrument.capacity.map((capItem, i) => (
+                          <li key={i} className="text-xs text-slate-650 flex items-start space-x-1.5">
+                            <span className="text-cyan-500 font-bold">•</span>
+                            <span>{capItem}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className="text-xs text-slate-650 leading-relaxed">{selectedInstrument.capacity}</p>
+                    )}
                   </div>
                 </div>
 
